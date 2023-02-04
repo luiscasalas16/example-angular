@@ -8,9 +8,6 @@ import { Component } from '@angular/core';
 })
 export class BaseDirectivesComponent {
   
-  true_field: boolean = true;
-  false_field: boolean = false;
-  
   currentItem: string = '';
 
   classes1_field =  

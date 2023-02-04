@@ -1,0 +1,21 @@
+<form (ngSubmit)="insert()">
+    <div class="mb-3">
+        <input 
+            type="text" 
+            name="nombre"
+            [(ngModel)]="new.heroeName"
+            placeholder="Heroe Name"
+            class="form-control"
+        />
+    </div>
+    <div class="mb-3">
+        <input 
+        type="text" 
+        name="poder"
+        [(ngModel)]="new.realName"
+        placeholder="Real Name" 
+        class="form-control"
+    />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
