@@ -12,12 +12,16 @@ const routes: Routes =
   { 
     path: '', 
     redirectTo: 'home', 
-    pathMatch: 'full' 
+    pathMatch: 'full'
   },
+  //root route example
+  //specific style component
   { 
     path: 'home', 
     component: HomeComponent 
   },
+  //root and children route example
+  //component with the style for child components
   { 
     path: 'about', 
     component: AboutComponent, 
@@ -38,14 +42,21 @@ const routes: Routes =
       }
     ]
   },
-  { 
-    path: 'notfound', 
-    component: NotFoundComponent 
-  },
+  //lazy example
   {
 	  path: 'auth',
 	  loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
   },
+  {
+	  path: 'base',
+	  loadChildren: () => import('./base/base.module').then( m => m.BaseModule )
+  },
+  //not fount route example
+  { 
+    path: 'notfound', 
+    component: NotFoundComponent 
+  },
+  //default route redirection
   {
     path: '**',
     redirectTo: 'notfound'

@@ -1,0 +1,39 @@
+<hr><h4>ngClass</h4>
+
+<p [ngClass]="'text-capitalize fw-bold'">capitalized text.</p>
+
+<p [ngClass]="['text-capitalize', 'fw-bold']">capitalized text.</p>
+
+<p [ngClass]="{'text-capitalize fw-bold': true_field}">capitalized text.</p>
+
+<p [ngClass]="{'text-capitalize': true_field, 'fw-bold': true_field}">capitalized text.</p>
+
+<p [ngClass]="classes1_field">capitalized text.</p>
+<p [ngClass]="classes2_field">capitalized text.</p>
+
+<p [ngClass]="getClassObject()">capitalized text.</p>
+
+<hr><h4>ngStyle</h4>
+
+<p [ngStyle]="getStylesObject()">capitalized text.</p>
+
+<hr>
+
+<fieldset><h4>ngModel</h4>
+    <p>* must import FormsModule into the NgModule</p>
+    <p>Current item: {{currentItem}}</p>
+    <p>
+    <label for="without">without NgModel:</label>
+    <input [value]="currentItem" (input)="currentItem=getCurrentItem($event)" id="without">
+    </p>
+
+    <p>
+    <label for="example-ngModel">[(ngModel)]:</label>
+    <input [(ngModel)]="currentItem" id="example-ngModel">
+    </p>
+
+    <p>
+    <label for="example-change">(ngModelChange)="...name=$event":</label>
+    <input [ngModel]="currentItem" (ngModelChange)="currentItem=$event" id="example-change">
+    </p>
+</fieldset>

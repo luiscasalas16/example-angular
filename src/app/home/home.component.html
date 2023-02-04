@@ -1,1 +1,33 @@
 <p>home works!</p>
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Example Angular</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a routerLink="/home" class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/about/application" class="nav-link" href="#">About-App</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/about/developer" class="nav-link" href="#">About-Dev</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    1 Base
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a routerLink="/base/counter" class="dropdown-item" href="#">1.1 Counter</a></li>
+                    <li><a routerLink="/base/base-directives" class="dropdown-item" href="#">1.2 Base-Directives</a></li>
+                    <li><a routerLink="/base/structural-directives" class="dropdown-item" href="#">1.3 Structural-Directives</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </div>
+</nav>

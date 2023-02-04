@@ -1,0 +1,27 @@
+<hr><h4>ngIf</h4>
+
+<p>this text is displayed</p>
+
+<p *ngIf="true">this text is displayed</p>
+
+<p *ngIf="true; else ABC">this text is displayed</p>
+<ng-template #ABC>
+    <p>this text is not displayed</p>
+</ng-template>
+
+<hr><h4>ngFor</h4>
+
+<ul>
+    <li *ngFor="let num of numbers; let i = index"> 
+        {{ i + 1 }} - {{ num }}
+    </li>
+</ul>
+
+<hr><h4>ngSwitch</h4>
+
+<div [ngSwitch]="number">
+    <p *ngSwitchCase="'one'">one</p>
+    <p *ngSwitchCase="'two'">two</p>
+    <p *ngSwitchCase="'three'">three</p>
+    <p *ngSwitchDefault="'unknow'">three</p>
+  </div>
