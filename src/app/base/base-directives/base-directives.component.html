@@ -24,16 +24,11 @@
         <p>Current item: {{currentItem}}</p>
         <p>
         <label for="without">without ngModel:</label>
-        <input [value]="currentItem" (input)="currentItem=getCurrentItem($event)">
+        <input [value]="currentItem" (input)="currentItem=getCurrentItem($event)" id="without">
         </p>
 
         <p>
-        <label for="example-ngModel">[(ngModel)]:</label>
-        <input [(ngModel)]="currentItem" id="example-ngModel">
-        </p>
-
-        <p>
-        <label for="example-change">(ngModel) and (ngModelChange):</label>
-        <input [ngModel]="currentItem" (ngModelChange)="currentItem=$event">
+        <label for="with">with ngModel:</label>
+        <input [(ngModel)]="currentItem" id="with">
         </p>
     </fieldset>

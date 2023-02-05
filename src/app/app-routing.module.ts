@@ -51,6 +51,10 @@ const routes: Routes =
 	  path: 'base',
 	  loadChildren: () => import('./base/base.module').then( m => m.BaseModule )
   },
+  {
+	  path: 'forms',
+	  loadChildren: () => import('./frms/frms.module').then( m => m.FrmsModule )
+  },
   //not fount route example
   { 
     path: 'notfound', 

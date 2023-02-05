@@ -1,19 +1,25 @@
-<form (ngSubmit)="insert()">
+<p>without ngSubmit:</p>
+
+<form (submit)="submitWithout($event)">
     <div class="mb-3">
         <input 
             type="text" 
             name="nombre"
-            [(ngModel)]="new.heroeName"
             placeholder="Heroe Name"
             class="form-control"
         />
     </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<p>with ngSubmit:</p>
+
+<form (ngSubmit)="submitWith()">
     <div class="mb-3">
         <input 
             type="text" 
-            name="poder"
-            [(ngModel)]="new.realName"
-            placeholder="Real Name" 
+            name="nombre"
+            placeholder="Heroe Name"
             class="form-control"
         />
     </div>
