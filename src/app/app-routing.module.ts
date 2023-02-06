@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { ApplicationComponent } from './about/pages/application/application.component';
 import { DeveloperComponent } from './about/pages/developer/developer.component';
 import { NotFoundComponent } from './shared/page/not-found/not-found.component';
+import { TemplatesModule } from './templates/templates.module';
 
 const routes: Routes = 
 [
@@ -50,6 +51,10 @@ const routes: Routes =
   {
 	  path: 'components',
 	  loadChildren: () => import('./components/components.module').then( m => m.ComponentsModule )
+  },
+  {
+	  path: 'templates',
+	  loadChildren: () => import('./templates/templates.module').then( m => m.TemplatesModule )
   },
   {
 	  path: 'directives',

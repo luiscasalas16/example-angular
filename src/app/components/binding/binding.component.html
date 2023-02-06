@@ -1,10 +1,10 @@
-<hr><h4>property</h4>
+<hr><h4>property binding</h4>
 
     <p class="text-capitalize">string binding</p>
 
     <p [class]="text_capitalize">expresion binding</p>
 
-<hr><h4>attribute</h4>
+<hr><h4>attribute binding</h4>
 
     <table border=1>
         <tr><td [attr.colspan]="1 + 1">One-Two</td></tr>
@@ -12,7 +12,7 @@
         <tr><td>Three</td><td>Four</td></tr>
     </table>
 
-<hr><h4>class</h4>
+<hr><h4>class binding</h4>
 
     <p class="text-capitalize fw-bold">capitalized text.</p>
 
@@ -24,7 +24,7 @@
 
     <p [class]="['text-capitalize', 'fw-bold']">capitalized text.</p>
 
-<hr><h4>style</h4>
+<hr><h4>style binding</h4>
 
     <p style="text-transform:capitalize;font-weight:bold">capitalized text.</p>
 
@@ -34,13 +34,13 @@
 
     <p [style]="{'text-transform' : 'capitalize', 'font-weight' : 'bold'}">capitalized text.</p>
 
-<hr><h4>event</h4>
+<hr><h4>event binding</h4>
 
     <button (click)="click()" class="btn btn-primary">click no event</button>
     &nbsp;
     <button (click)="click($event)" class="btn btn-primary">click event</button>
 
-<hr><h4>two-way</h4>
+<hr><h4>two-way binding</h4>
 
     <app-sizer [(size)]="fontSizePx"></app-sizer>
     <div [style.font-size.px]="fontSizePx">Resizable Text</div>
