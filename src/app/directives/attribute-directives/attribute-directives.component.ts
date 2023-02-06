@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-base-directives',
-  templateUrl: './base-directives.component.html',
+  selector: 'app-attribute-directives',
+  templateUrl: './attribute-directives.component.html',
   styles: [
   ]
 })
-export class BaseDirectivesComponent {
+export class AttributeDirectivesComponent {
   
   currentItem: string = '';
 

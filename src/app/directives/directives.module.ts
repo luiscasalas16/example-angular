@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { DirectivesRoutingModule } from './directives-routing.module';
 
-import { BaseDirectivesComponent } from './base-directives/base-directives.component';
+import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 
 @NgModule({
   declarations: [
-    BaseDirectivesComponent,
+    AttributeDirectivesComponent,
     StructuralDirectivesComponent,
   ],
   imports: [

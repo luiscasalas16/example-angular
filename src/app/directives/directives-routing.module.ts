@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
-import { BaseDirectivesComponent } from './base-directives/base-directives.component';
 
 const routes: Routes = 
 [
@@ -10,7 +10,7 @@ const routes: Routes =
     path: '', 
     children: 
     [
-      { path: 'base-directives', component: BaseDirectivesComponent },
+      { path: 'attribute-directives', component: AttributeDirectivesComponent },
       { path: 'structural-directives', component: StructuralDirectivesComponent }
     ]
   }
