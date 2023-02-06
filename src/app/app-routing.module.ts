@@ -48,11 +48,19 @@ const routes: Routes =
 	  loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
   },
   {
-	  path: 'base',
-	  loadChildren: () => import('./base/base.module').then( m => m.BaseModule )
+	  path: 'components',
+	  loadChildren: () => import('./components/components.module').then( m => m.ComponentsModule )
   },
   {
-	  path: 'forms',
+	  path: 'directives',
+	  loadChildren: () => import('./directives/directives.module').then( m => m.DirectivesModule )
+  },
+  {
+	  path: 'examples',
+	  loadChildren: () => import('./examples/examples.module').then( m => m.ExamplesModule )
+  },
+  {
+	  path: 'frms',
 	  loadChildren: () => import('./frms/frms.module').then( m => m.FrmsModule )
   },
   //not fount route example
