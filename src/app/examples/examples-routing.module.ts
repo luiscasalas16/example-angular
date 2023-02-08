@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CounterComponent } from './01counter/counter.component';
 import { HeroeMainComponent } from './02heroes/heroe-main/heroe-main.component';
+import { GifMainComponent } from './03gifs/gif-main/gif-main.component';
 
 const routes: Routes = 
 [
@@ -12,6 +13,7 @@ const routes: Routes =
     [
       { path: 'counter', component: CounterComponent },
       { path: 'heroes', component: HeroeMainComponent },
+      { path: 'gifs', component: GifMainComponent },
     ]
   }
 ];

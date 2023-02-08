@@ -5,17 +5,26 @@ import { FormsModule } from '@angular/forms';
 import { ExamplesRoutingModule } from './examples-routing.module';
 
 import { CounterComponent } from './01counter/counter.component';
-import { HeroeService } from './02heroes/services/heroes.service';
+
 import { HeroeDetailComponent } from './02heroes/heroe-detail/heroe-detail.component';
 import { HeroeListComponent } from './02heroes/heroe-list/heroe-list.component';
 import { HeroeMainComponent } from './02heroes/heroe-main/heroe-main.component';
+import { HeroeService } from './02heroes/services/heroes.service';
+
+import { GifSearchComponent } from './03gifs/gif-search/gif-search.component';
+import { GifResultsComponent } from './03gifs/gif-results/gif-results.component';
+import { GifMainComponent } from './03gifs/gif-main/gif-main.component';
+import { GifsService } from './03gifs/services/gifs.service';
 
 @NgModule({
   declarations: [
     CounterComponent,
     HeroeDetailComponent,
     HeroeListComponent,
-    HeroeMainComponent
+    HeroeMainComponent,
+    GifSearchComponent,
+    GifResultsComponent,
+    GifMainComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +32,8 @@ import { HeroeMainComponent } from './02heroes/heroe-main/heroe-main.component';
     ExamplesRoutingModule
   ],
   providers: [
-    HeroeService
+    HeroeService,
+    GifsService
   ]
 })
 export class ExamplesModule { }

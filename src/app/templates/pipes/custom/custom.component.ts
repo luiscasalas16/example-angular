@@ -32,6 +32,18 @@ export class CustomComponent {
       name: 'Pakistan',
       population: 220892340
     },
+    {
+      name: 'Brazil',
+      population: 212559417
+    },
+    {
+      name: 'Nigeria',
+      population: 206139589
+    },
+    {
+      name: 'Bangladesh',
+      population: 164689383
+    },
   ]
 
   order(column : string) {

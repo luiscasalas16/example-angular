@@ -68,6 +68,10 @@ const routes: Routes =
 	  path: 'frms',
 	  loadChildren: () => import('./frms/frms.module').then( m => m.FrmsModule )
   },
+  {
+	  path: 'http',
+	  loadChildren: () => import('./http/http.module').then( m => m.HttpModule )
+  },
   //not fount route example
   { 
     path: 'notfound', 

@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; ; 
 
-import { FrmsRoutingModule } from './frms-routing.module';
+import { HttpRoutingModule } from './http-routing.module';
 import { BasicComponent } from './basic/basic.component';
 
 
@@ -12,8 +11,7 @@ import { BasicComponent } from './basic/basic.component';
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    FrmsRoutingModule
+    HttpRoutingModule
   ]
 })
-export class FrmsModule { }
+export class HttpModule { }
