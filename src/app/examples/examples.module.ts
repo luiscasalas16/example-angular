@@ -15,6 +15,13 @@ import { GifSearchComponent } from './03gifs/gif-search/gif-search.component';
 import { GifResultsComponent } from './03gifs/gif-results/gif-results.component';
 import { GifMainComponent } from './03gifs/gif-main/gif-main.component';
 import { GifsService } from './03gifs/services/gifs.service';
+import { CountryMainComponent } from './04countries/pages/country-main/country-main.component';
+import { CountryByNameComponent } from './04countries/pages/country-by-name/country-by-name.component';
+import { CountryByCapitalComponent } from './04countries/pages/country-by-capital/country-by-capital.component';
+import { CountryDetailComponent } from './04countries/pages/country-detail/country-detail.component';
+import { CountrySearchComponent } from './04countries/components/country-search/country-search.component';
+import { CountryTableComponent } from './04countries/components/country-table/country-table.component';
+import { CountriesService } from './04countries/services/countries.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +31,13 @@ import { GifsService } from './03gifs/services/gifs.service';
     HeroeMainComponent,
     GifSearchComponent,
     GifResultsComponent,
-    GifMainComponent
+    GifMainComponent,
+    CountryMainComponent,
+    CountryByNameComponent,
+    CountryByCapitalComponent,
+    CountryDetailComponent,
+    CountrySearchComponent,
+    CountryTableComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +46,8 @@ import { GifsService } from './03gifs/services/gifs.service';
   ],
   providers: [
     HeroeService,
-    GifsService
+    GifsService,
+    CountriesService
   ]
 })
 export class ExamplesModule { }

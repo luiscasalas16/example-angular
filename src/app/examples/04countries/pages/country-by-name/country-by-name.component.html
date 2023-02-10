@@ -1,0 +1,27 @@
+<div class="row align-items-center">
+    <div class="col">
+        <h5>Country by Name</h5>
+    </div>
+</div>
+<br>
+<div class="row align-items-center">
+    <div class="col">
+        <app-country-search 
+            (onEnter)="search($event)"
+            placeholder="Country by Name..."></app-country-search>
+    </div>
+</div>
+<br>
+<div class="row align-items-center">
+    <div class="col">
+        <div *ngIf="error" 
+            class="alert alert-danger">
+            Nothing was found for the term {{ searchText }}.
+        </div>
+        <div *ngIf="countries.length > 0" class="row">
+            <div class="col">
+                <app-country-table [countries]="countries"></app-country-table>
+            </div>
+        </div>
+    </div>
+</div>
