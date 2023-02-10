@@ -1,0 +1,46 @@
+<div class="container text-center">
+    <div class="row align-items-center">
+        <div class="col">
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <a 
+                    class="nav-link" 
+                    routerLink="/routes/main"
+                    routerLinkActive="active"
+                    href="#">Main</a>
+                </li>
+                <li class="nav-item">
+                    <a 
+                    class="nav-link" 
+                    routerLink="/routes/first"
+                    routerLinkActive="active"
+                    href="#">First</a>
+                </li>
+                <li class="nav-item">
+                    <a 
+                    class="nav-link"
+                    routerLink="/routes/second"
+                    routerLinkActive="active"
+                    href="#">Second</a>
+                </li>
+                <li class="nav-item">
+                    <a 
+                    class="nav-link"
+                    [routerLink]="['/routes/query-params']"
+                    [queryParams]="{ sort:'name', order: 'desc'}"
+                    routerLinkActive="active"
+                    href="#">Query Params</a>
+                </li>
+                <li class="nav-item">
+                    <a 
+                    class="nav-link"
+                    [routerLink]="['/routes/route-params', 12345]"
+                    routerLinkActive="active"
+                    href="#">Route Params</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <router-outlet></router-outlet>
+</div>

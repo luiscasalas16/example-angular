@@ -61,8 +61,8 @@ const routes: Routes =
 	  loadChildren: () => import('./directives/directives.module').then( m => m.DirectivesModule )
   },
   {
-	  path: 'examples',
-	  loadChildren: () => import('./examples/examples.module').then( m => m.ExamplesModule )
+	  path: 'routes',
+	  loadChildren: () => import('./routes/routes.module').then( m => m.RoutesModule )
   },
   {
 	  path: 'frms',
@@ -71,6 +71,10 @@ const routes: Routes =
   {
 	  path: 'http',
 	  loadChildren: () => import('./http/http.module').then( m => m.HttpModule )
+  },
+  {
+	  path: 'examples',
+	  loadChildren: () => import('./examples/examples.module').then( m => m.ExamplesModule )
   },
   //not fount route example
   { 
