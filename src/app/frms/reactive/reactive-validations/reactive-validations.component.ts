@@ -9,8 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ReactiveValidationsComponent {
   myForm : FormGroup = this.fb.group({
-    name: [ , [Validators.required, Validators.minLength(3)]],
-    price: ['0' , [Validators.required, Validators.min(0)]]
+    id: [ , [Validators.required]],
   })
   
   constructor(private fb: FormBuilder) { }
@@ -25,8 +24,6 @@ export class ReactiveValidationsComponent {
       return;
     }
 
-    this.myForm.reset({
-      price : '0'
-    });
+    this.myForm.reset();
   }
 }

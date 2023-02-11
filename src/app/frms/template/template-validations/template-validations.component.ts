@@ -12,8 +12,7 @@ export class TemplateValidationsComponent {
   @ViewChild('myForm') myForm!: NgForm;
 
   initForm = {
-    name: '',
-    price: '0'
+    id: ''
   }
 
   controlValid( controlName: string ) {
@@ -26,8 +25,6 @@ export class TemplateValidationsComponent {
       return;
     }
 
-    this.myForm.form.reset({
-      price : '0'
-    });
+    this.myForm.form.reset();
   }
 }
