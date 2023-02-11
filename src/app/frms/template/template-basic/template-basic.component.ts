@@ -16,7 +16,7 @@ export class TemplateBasicComponent {
   }
 
   controlValid( controlName: string ) {
-    return this.myForm?.controls[controlName]?.invalid && this.myForm?.controls[controlName]?.touched;
+    return this.myForm?.controls[controlName]?.errors && this.myForm?.controls[controlName]?.touched;
   }
 
   submit() {
