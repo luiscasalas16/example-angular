@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; ; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; ; 
 
 import { FrmsRoutingModule } from './frms-routing.module';
 import { TemplateBasicComponent } from './template/template-basic/template-basic.component';
@@ -22,6 +22,7 @@ import { ReactiveValidationsComponent } from './reactive/reactive-validations/re
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     FrmsRoutingModule
   ]
 })
