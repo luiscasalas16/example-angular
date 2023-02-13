@@ -7,13 +7,18 @@
             <form (ngSubmit)="submit()" autocomplete="off" [formGroup]="myForm">
                 
                 <div class="mb-3 row">
-                    <label class="col-sm-3 col-form-label">Identification Card</label>
+                    <label class="col-sm-3 col-form-label">Identification Card (#-####-####)</label>
                     <div class="col-sm-9">
                         <input type="text"
                                class="form-control"
                                formControlName="id">
                         <span class="form-text text-danger" *ngIf="controlValid('id')">
-                            Invalid identity card format.
+                            <div *ngIf="myForm.get('id')?.errors?.['required']">
+                                Identification card is required.
+                            </div>
+                            <div *ngIf="myForm.get('id')?.errors?.['regex']">
+                                Invalid identification card format.
+                            </div>
                         </span>
                     </div>
                 </div>

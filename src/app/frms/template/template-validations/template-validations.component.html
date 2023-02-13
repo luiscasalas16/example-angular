@@ -13,9 +13,15 @@
                                class="form-control"
                                [ngModel]="initForm.id"
                                name="id"
-                               required>
+                               required
+                               regexCustomValidator="^\d-\d\d\d\d-\d\d\d\d$">
                         <span class="form-text text-danger" *ngIf="controlValid('id')">
-                            Invalid identity card format.
+                            <div *ngIf="myForm.controls['id']?.errors?.['required']">
+                                Identification card is required.
+                            </div>
+                            <div *ngIf="myForm.controls['id']?.errors?.['regex']">
+                                Invalid identification card format.
+                            </div>
                         </span>
                     </div>
                 </div>

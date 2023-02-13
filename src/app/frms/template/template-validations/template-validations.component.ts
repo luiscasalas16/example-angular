@@ -1,11 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-
 @Component({
   selector: 'app-template-validations',
   templateUrl: './template-validations.component.html',
   styles: [
+    '.ng-valid:not(form)  { background-color: green; }',
+    '.ng-touched .ng-invalid:not(form)  { background-color: red;}'
   ]
 })
 export class TemplateValidationsComponent {
