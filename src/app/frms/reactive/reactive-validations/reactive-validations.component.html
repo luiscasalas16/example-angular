@@ -23,6 +23,32 @@
                     </div>
                 </div>
 
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Password 1</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                               class="form-control"
+                               formControlName="password1">
+                        <span class="form-text text-danger" *ngIf="controlValid('password1')">
+                            Password 1 is required.
+                        </span>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">Password 2</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                               class="form-control"
+                               formControlName="password2">
+                        <span class="form-text text-danger" *ngIf="controlValid('password2')">
+                            Password 2 is required.
+                        </span>
+                    </div>
+                </div>
+                <div *ngIf="myForm.errors?.['password'] && (myForm.touched || myForm.dirty)" class="cross-validation-error-message alert alert-danger">
+                    Passwords not match.
+                </div>
+
                 <div class="row">
                     <div class="col">
                         <button type="submit"

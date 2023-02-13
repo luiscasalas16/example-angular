@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { regexCustomValidator } from './regex-custom-validator';
+import { RegexCustomValidator, PasswordCustomValidator } from './custom-validators';
 
 @Component({
   selector: 'app-reactive-validations',
@@ -12,8 +12,10 @@ import { regexCustomValidator } from './regex-custom-validator';
 })
 export class ReactiveValidationsComponent {
   myForm : FormGroup = this.fb.group({
-    id: [ , [Validators.required, regexCustomValidator(/^\d-\d\d\d\d-\d\d\d\d$/g)]],
-  })
+    id: [ , [ Validators.required, RegexCustomValidator(/^\d-\d\d\d\d-\d\d\d\d$/g) ] ],
+    password1: [ , [ Validators.required ] ],
+    password2: [ , [ Validators.required ] ]
+  }, { validators: PasswordCustomValidator })
   
   constructor(private fb: FormBuilder) { }
 

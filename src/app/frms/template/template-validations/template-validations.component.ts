@@ -13,7 +13,9 @@ export class TemplateValidationsComponent {
   @ViewChild('myForm') myForm!: NgForm;
 
   initForm = {
-    id: ''
+    id: '',
+    password1: '',
+    password2: ''
   }
 
   controlValid( controlName: string ) {
