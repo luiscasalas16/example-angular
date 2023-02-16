@@ -73,6 +73,14 @@ const routes: Routes =
 	  loadChildren: () => import('./http/http.module').then( m => m.HttpModule )
   },
   {
+	  path: 'imports',
+	  loadChildren: () => import('./imports/imports.module').then( m => m.ImportsModule )
+  },
+  {
+	  path: 'api',
+	  loadChildren: () => import('./api/api.module').then( m => m.ApiModule )
+  },
+  {
 	  path: 'examples',
 	  loadChildren: () => import('./examples/examples.module').then( m => m.ExamplesModule )
   },

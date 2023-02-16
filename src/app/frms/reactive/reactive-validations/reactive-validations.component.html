@@ -49,6 +49,23 @@
                     Passwords not match.
                 </div>
 
+                <div class="mb-3 row">
+                    <label class="col-sm-3 col-form-label">User</label>
+                    <div class="col-sm-9">
+                        <input type="text"
+                               class="form-control"
+                               formControlName="user">
+                        <span class="form-text text-danger" *ngIf="controlValid('user')">
+                            <div *ngIf="myForm.get('user')?.errors?.['required']">
+                                User is required.
+                            </div>
+                            <div *ngIf="myForm.get('user')?.errors?.['username']">
+                                User is already exists.
+                            </div>
+                        </span>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col">
                         <button type="submit"

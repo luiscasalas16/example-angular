@@ -15,7 +15,8 @@ export class TemplateValidationsComponent {
   initForm = {
     id: '',
     password1: '',
-    password2: ''
+    password2: '',
+    user: ''
   }
 
   controlValid( controlName: string ) {

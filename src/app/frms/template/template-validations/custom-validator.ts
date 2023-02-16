@@ -1,6 +1,9 @@
-import { Directive, Input } from '@angular/core';
-import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from "@angular/forms";
+import { Directive, forwardRef, Input } from '@angular/core';
+import { AbstractControl, NG_ASYNC_VALIDATORS, NG_VALIDATORS, ValidationErrors, Validator, AsyncValidator } from '@angular/forms';
+import { map, catchError, of, Observable } from 'rxjs';
+import { CustomValidatorService } from '../../services/custom-validator.service';
 
+//custom synchronous validator for one control
 @Directive
 ({
     selector: '[regexCustomValidator]',
@@ -18,6 +21,7 @@ export class RegexCustomValidatorDirective implements Validator
     }
 }
 
+//custom synchronous validator for two or more controls
 @Directive
 ({
     selector: '[passwordCustomValidator]',
@@ -33,3 +37,22 @@ export class PasswordCustomValidatorDirective implements Validator {
         return password1 && password2 && password1.value != password2.value ? { password: true } : null;
     }
 }
+
+//custom asynchronous validator for one control
+@Directive({
+    selector: '[userNameCustomValidator]',
+    providers: [ { provide: NG_ASYNC_VALIDATORS, useExisting: forwardRef(() => UserNameCustomValidatorDirective), multi: true } ]
+  })
+  export class UserNameCustomValidatorDirective implements AsyncValidator {
+
+    constructor(private customValidatorService: CustomValidatorService) {}
+  
+    validate(control: AbstractControl): Observable<ValidationErrors | null> {
+        return this.customValidatorService.isUserNameTaken(control.value).pipe(
+            map(isTaken => (isTaken 
+              ? { username: true } 
+              : null)),
+            catchError(() => of(null))
+          );
+    }
+  }

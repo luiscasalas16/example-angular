@@ -10,7 +10,7 @@ import { ReactiveBasicComponent } from './reactive/reactive-basic/reactive-basic
 import { ReactiveDynamicComponent } from './reactive/reactive-dynamic/reactive-dynamic.component';
 import { ReactiveValidationsComponent } from './reactive/reactive-validations/reactive-validations.component';
 
-import { RegexCustomValidatorDirective, PasswordCustomValidatorDirective } from './template/template-validations/custom-validator';
+import { RegexCustomValidatorDirective, PasswordCustomValidatorDirective, UserNameCustomValidatorDirective } from './template/template-validations/custom-validator';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { RegexCustomValidatorDirective, PasswordCustomValidatorDirective } from 
     ReactiveDynamicComponent,
     ReactiveValidationsComponent,
     RegexCustomValidatorDirective,
-    PasswordCustomValidatorDirective
+    PasswordCustomValidatorDirective,
+    UserNameCustomValidatorDirective
   ],
   imports: [
     CommonModule,
