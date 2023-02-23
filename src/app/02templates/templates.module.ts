@@ -6,6 +6,7 @@ import { TemplatesRoutingModule } from './templates-routing.module';
 import { BuiltInComponent } from './pipes/built-in/built-in.component';
 import { CustomComponent } from './pipes/custom/custom.component';
 import { SortPipe } from './pipes/custom/sort.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SortPipe } from './pipes/custom/sort.pipe';
   ],
   imports: [
     CommonModule,
-    TemplatesRoutingModule
+    TemplatesRoutingModule,
+    SharedModule
   ]
 })
 export class TemplatesModule { }

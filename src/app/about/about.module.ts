@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about.component';
 import { DeveloperComponent } from './pages/developer/developer.component';
 import { ApplicationComponent } from './pages/application/application.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,15 +17,13 @@ import { ApplicationComponent } from './pages/application/application.component'
   imports: [
     //modules that are imported into the module
     CommonModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   exports	: [
     //components that are exported from the module
     DeveloperComponent,
     ApplicationComponent
   ],
-  
-
-
 })
 export class AboutModule { }

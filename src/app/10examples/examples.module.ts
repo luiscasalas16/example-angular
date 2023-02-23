@@ -22,6 +22,7 @@ import { CountryDetailComponent } from './04countries/pages/country-detail/count
 import { CountrySearchComponent } from './04countries/components/country-search/country-search.component';
 import { CountryTableComponent } from './04countries/components/country-table/country-table.component';
 import { CountriesService } from './04countries/services/countries.service';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { CountriesService } from './04countries/services/countries.service';
   providers: [
     HeroeService,
     GifsService,
-    CountriesService
+    CountriesService,
+    SharedModule
   ]
 })
 export class ExamplesModule { }

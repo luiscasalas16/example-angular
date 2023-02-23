@@ -11,6 +11,7 @@ import { ReactiveDynamicComponent } from './reactive/reactive-dynamic/reactive-d
 import { ReactiveValidationsComponent } from './reactive/reactive-validations/reactive-validations.component';
 
 import { RegexCustomValidatorDirective, PasswordCustomValidatorDirective, UserNameCustomValidatorDirective } from './template/template-validations/custom-validator';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RegexCustomValidatorDirective, PasswordCustomValidatorDirective, UserNa
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FrmsRoutingModule
+    FrmsRoutingModule,
+    SharedModule
   ]
 })
 export class FrmsModule { }

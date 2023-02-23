@@ -6,6 +6,7 @@ import { ComponentsRoutingModule } from './components-routing.module';
 
 import { BindingComponent } from './binding/binding.component';
 import { SizerComponent } from './binding/sizer.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SizerComponent } from './binding/sizer.component';
   imports: [
     CommonModule,
     FormsModule,
-    ComponentsRoutingModule
+    ComponentsRoutingModule,
+    SharedModule
   ]
 })
 export class ComponentsModule { }

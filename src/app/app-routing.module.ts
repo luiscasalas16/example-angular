@@ -90,7 +90,7 @@ const routes: Routes =
   //not fount route example
   { 
     path: 'notfound', 
-    component: NotFoundComponent 
+    component: NotFoundComponent
   },
   //default route redirection
   {

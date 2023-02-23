@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
+import { MasterComponent } from '../shared/components/master/master.component';
 
 const routes: Routes = 
 [
   { 
-    path: '', 
+    path: '',
+    component: MasterComponent,
     children: 
     [
       { path: 'attribute-directives', component: AttributeDirectivesComponent },

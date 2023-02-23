@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ApiRoutingModule } from './api-routing.module';
 import { ViewChildComponent } from './view-child/view-child.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ViewChildComponent } from './view-child/view-child.component';
   ],
   imports: [
     CommonModule,
-    ApiRoutingModule
+    ApiRoutingModule,
+    SharedModule
   ]
 })
 export class ApiModule { }

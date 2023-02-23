@@ -4,10 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
-import { ErrorComponent } from './shared/page/error/error.component';
-import { NotFoundComponent } from './shared/page/not-found/not-found.component';
+import { SharedModule } from './shared/shared.module';
 
 //locate
 import localeEsCr from '@angular/common/locales/es-CR';
@@ -22,8 +22,6 @@ registerLocaleData( localeFr );
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorComponent,
-    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +31,7 @@ registerLocaleData( localeFr );
 
     HomeModule,
     AboutModule,
+    SharedModule
   ], 
   //locate
   providers: [

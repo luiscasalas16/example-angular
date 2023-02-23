@@ -8,11 +8,13 @@ import { CountryMainComponent } from './04countries/pages/country-main/country-m
 import { CountryByCapitalComponent } from './04countries/pages/country-by-capital/country-by-capital.component';
 import { CountryByNameComponent } from './04countries/pages/country-by-name/country-by-name.component';
 import { CountryDetailComponent } from './04countries/pages/country-detail/country-detail.component';
+import { MasterComponent } from '../shared/components/master/master.component';
 
 const routes: Routes = 
 [
   { 
     path: '', 
+    component: MasterComponent,
     children: 
     [
       { path: 'counter', component: CounterComponent },

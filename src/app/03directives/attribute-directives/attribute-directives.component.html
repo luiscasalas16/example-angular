@@ -1,34 +1,34 @@
 <hr><h4>ngClass</h4>
 
-    <p [ngClass]="'text-capitalize fw-bold'">capitalized text.</p>
+<p [ngClass]="'text-capitalize fw-bold'">capitalized text.</p>
 
-    <p [ngClass]="['text-capitalize', 'fw-bold']">capitalized text.</p>
+<p [ngClass]="['text-capitalize', 'fw-bold']">capitalized text.</p>
 
-    <p [ngClass]="{'text-capitalize fw-bold': true}">capitalized text.</p>
+<p [ngClass]="{'text-capitalize fw-bold': true}">capitalized text.</p>
 
-    <p [ngClass]="{'text-capitalize': true, 'fw-bold': true}">capitalized text.</p>
+<p [ngClass]="{'text-capitalize': true, 'fw-bold': true}">capitalized text.</p>
 
-    <p [ngClass]="classes1_field">capitalized text.</p>
-    <p [ngClass]="classes2_field">capitalized text.</p>
+<p [ngClass]="classes1_field">capitalized text.</p>
+<p [ngClass]="classes2_field">capitalized text.</p>
 
-    <p [ngClass]="getClassObject()">capitalized text.</p>
+<p [ngClass]="getClassObject()">capitalized text.</p>
 
 <hr><h4>ngStyle</h4>
 
-    <p [ngStyle]="getStylesObject()">capitalized text.</p>
+<p [ngStyle]="getStylesObject()">capitalized text.</p>
 
 <hr><h4>ngModel</h4>
 
-    <fieldset>
-        <p>* must import FormsModule into the NgModule</p>
-        <p>Current item: {{currentItem}}</p>
-        <p>
-        <label for="without">without ngModel:</label>
-        <input [value]="currentItem" (input)="currentItem=getCurrentItem($event)" id="without">
-        </p>
+<fieldset>
+    <p>* must import FormsModule into the NgModule</p>
+    <p>Current item: {{currentItem}}</p>
+    <p>
+    <label for="without">without ngModel:</label>
+    <input [value]="currentItem" (input)="currentItem=getCurrentItem($event)" id="without">
+    </p>
 
-        <p>
-        <label for="with">with ngModel:</label>
-        <input [(ngModel)]="currentItem" id="with">
-        </p>
-    </fieldset>
+    <p>
+    <label for="with">with ngModel:</label>
+    <input [(ngModel)]="currentItem" id="with">
+    </p>
+</fieldset>

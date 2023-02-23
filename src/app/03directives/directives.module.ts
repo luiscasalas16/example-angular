@@ -6,6 +6,7 @@ import { DirectivesRoutingModule } from './directives-routing.module';
 
 import { AttributeDirectivesComponent } from './attribute-directives/attribute-directives.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { StructuralDirectivesComponent } from './structural-directives/structura
   imports: [
     CommonModule,
     FormsModule,
-    DirectivesRoutingModule
+    DirectivesRoutingModule,
+    SharedModule
   ]
 })
 export class DirectivesModule { }

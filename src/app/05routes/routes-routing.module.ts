@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
+import { CustomMasterComponent } from './custom-master/custom-master.component';
 import { MainComponent } from './main/main.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
@@ -11,7 +11,7 @@ const routes: Routes =
 [
   { 
     path: '', 
-    component: MenuComponent,
+    component: CustomMasterComponent,
     children: 
     [
       { path: '',   redirectTo: '/routes/main', pathMatch: 'full' },

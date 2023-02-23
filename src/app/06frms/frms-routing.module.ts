@@ -7,11 +7,13 @@ import { TemplateValidationsComponent } from './template/template-validations/te
 import { ReactiveBasicComponent } from './reactive/reactive-basic/reactive-basic.component';
 import { ReactiveDynamicComponent } from './reactive/reactive-dynamic/reactive-dynamic.component';
 import { ReactiveValidationsComponent } from './reactive/reactive-validations/reactive-validations.component';
+import { MasterComponent } from '../shared/components/master/master.component';
 
 const routes: Routes =
 [
   { 
     path: '', 
+    component: MasterComponent,
     children: 
     [
       { path: 'basic', component: BasicComponent },
