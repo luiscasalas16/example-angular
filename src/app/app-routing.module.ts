@@ -60,6 +60,10 @@ const routes: Routes =
 	  loadChildren: () => import('./03directives/directives.module').then( m => m.DirectivesModule )
   },
   {
+	  path: 'dependency',
+	  loadChildren: () => import('./04dependency/dependency.module').then( m => m.DependencyModule )
+  },
+  {
 	  path: 'routes',
 	  loadChildren: () => import('./05routes/routes.module').then( m => m.RoutesModule )
   },
