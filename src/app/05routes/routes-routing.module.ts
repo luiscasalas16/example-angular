@@ -6,6 +6,9 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { QueryParamsComponent } from './query-params/query-params.component';
 import { RouteParamsComponent } from './route-params/route-params.component';
+import { ExternalComponent } from './external/external.component';
+import { InternalComponent } from './internal/internal.component';
+import { InternalGuard } from './internal.guard';
 
 const routes: Routes =
 [
@@ -20,6 +23,8 @@ const routes: Routes =
       { path: 'second', component: SecondComponent },
       { path: 'query-params', component: QueryParamsComponent },
       { path: 'route-params/:id', component: RouteParamsComponent },
+      { path: 'external', component: ExternalComponent },
+      { path: 'internal', component: InternalComponent, canLoad: [ InternalGuard ], canActivate: [ InternalGuard ]},
       { path: '**', redirectTo: '/routes/main' }
     ]
   }
