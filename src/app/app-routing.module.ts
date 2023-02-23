@@ -6,7 +6,6 @@ import { AboutComponent } from './about/about.component';
 import { ApplicationComponent } from './about/pages/application/application.component';
 import { DeveloperComponent } from './about/pages/developer/developer.component';
 import { NotFoundComponent } from './shared/page/not-found/not-found.component';
-import { TemplatesModule } from './templates/templates.module';
 
 const routes: Routes = 
 [
@@ -50,39 +49,39 @@ const routes: Routes =
   },
   {
 	  path: 'components',
-	  loadChildren: () => import('./components/components.module').then( m => m.ComponentsModule )
+	  loadChildren: () => import('./01components/components.module').then( m => m.ComponentsModule )
   },
   {
 	  path: 'templates',
-	  loadChildren: () => import('./templates/templates.module').then( m => m.TemplatesModule )
+	  loadChildren: () => import('./02templates/templates.module').then( m => m.TemplatesModule )
   },
   {
 	  path: 'directives',
-	  loadChildren: () => import('./directives/directives.module').then( m => m.DirectivesModule )
+	  loadChildren: () => import('./03directives/directives.module').then( m => m.DirectivesModule )
   },
   {
 	  path: 'routes',
-	  loadChildren: () => import('./routes/routes.module').then( m => m.RoutesModule )
+	  loadChildren: () => import('./05routes/routes.module').then( m => m.RoutesModule )
   },
   {
 	  path: 'frms',
-	  loadChildren: () => import('./frms/frms.module').then( m => m.FrmsModule )
+	  loadChildren: () => import('./06frms/frms.module').then( m => m.FrmsModule )
   },
   {
 	  path: 'http',
-	  loadChildren: () => import('./http/http.module').then( m => m.HttpModule )
+	  loadChildren: () => import('./07http/http.module').then( m => m.HttpModule )
   },
   {
 	  path: 'imports',
-	  loadChildren: () => import('./imports/imports.module').then( m => m.ImportsModule )
+	  loadChildren: () => import('./08imports/imports.module').then( m => m.ImportsModule )
   },
   {
 	  path: 'api',
-	  loadChildren: () => import('./api/api.module').then( m => m.ApiModule )
+	  loadChildren: () => import('./09api/api.module').then( m => m.ApiModule )
   },
   {
 	  path: 'examples',
-	  loadChildren: () => import('./examples/examples.module').then( m => m.ExamplesModule )
+	  loadChildren: () => import('./10examples/examples.module').then( m => m.ExamplesModule )
   },
   //not fount route example
   { 
