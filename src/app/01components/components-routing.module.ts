@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { BindingComponent } from './binding/binding.component';
+import { BindingsComponent } from './bindings/bindings.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { MasterComponent } from '../shared/components/master/master.component';
 
 const routes: Routes = 
@@ -11,7 +12,8 @@ const routes: Routes =
     component: MasterComponent,
     children: 
     [
-      { path: 'binding', component: BindingComponent }
+      { path: 'bindings', component: BindingsComponent },
+      { path: 'lifecycle', component: LifecycleComponent }
     ]
   }
 ];

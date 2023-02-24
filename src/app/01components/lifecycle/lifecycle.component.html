@@ -1,0 +1,20 @@
+<p>lifecycle</p>
+
+<input type="text" [(ngModel)]="text" (input)="input()">
+
+<br>
+<br>
+
+<button (click)="button()">
+    Click
+</button>
+
+<br>
+<br>
+
+<span>{{ counter }}</span>
+
+<br>
+<br>
+
+<app-lifecycle-dummy [text]="text"></app-lifecycle-dummy>

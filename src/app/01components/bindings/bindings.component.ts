@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-binding',
-  templateUrl: './binding.component.html',
+  templateUrl: './bindings.component.html',
   styles: [
   ]
 })
-export class BindingComponent {
+export class BindingsComponent {
 
   text_capitalize : string = 'text-capitalize';
 
