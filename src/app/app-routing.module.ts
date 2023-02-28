@@ -84,8 +84,12 @@ const routes: Routes =
 	  loadChildren: () => import('./09api/api.module').then( m => m.ApiModule )
   },
   {
+	  path: 'tools',
+	  loadChildren: () => import('./10tools/tools.module').then( m => m.ToolsModule )
+  },
+  {
 	  path: 'examples',
-	  loadChildren: () => import('./10examples/examples.module').then( m => m.ExamplesModule )
+	  loadChildren: () => import('./11examples/examples.module').then( m => m.ExamplesModule )
   },
   //not fount route example
   { 

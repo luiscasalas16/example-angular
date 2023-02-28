@@ -1,0 +1,34 @@
+<hr><h4>manage commands</h4>
+
+<pre><code>
+//install
+npm install -g @angular/cli@latest
+
+//version
+ng version
+
+//create
+ng new XYZ
+
+//modules
+npm install
+
+//run angular <= 11
+set NODE_OPTIONS=--openssl-legacy-provider
+ng serve -o
+
+//run angular > 11
+ng serve -o
+
+//build
+ng build --configuration production
+</code></pre>
+
+<hr><h4>generate commands</h4>
+
+<pre><code>
+ng generate module XYZ --routing
+
+ng generate component XYZ --skip-tests --inline-style
+
+ng generate service XYZ</code></pre>
