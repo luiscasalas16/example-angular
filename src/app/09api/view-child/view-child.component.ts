@@ -9,7 +9,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 export class ViewChildComponent {
   @ViewChild('paragraph') paragraphContainer!: ElementRef<HTMLElement>;
 
-  test() {
+  changeColor() {
     let containerElement : HTMLElement = this.paragraphContainer.nativeElement;
     
     containerElement.style.backgroundColor = "red";  

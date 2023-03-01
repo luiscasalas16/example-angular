@@ -44,10 +44,6 @@ const routes: Routes =
   },
   //lazy example
   {
-	  path: 'auth',
-	  loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
-  },
-  {
 	  path: 'components',
 	  loadChildren: () => import('./01components/components.module').then( m => m.ComponentsModule )
   },

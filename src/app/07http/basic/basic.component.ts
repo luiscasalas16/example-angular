@@ -15,7 +15,7 @@ export class BasicComponent {
 
   constructor( private http: HttpClient ) { }
   
-  test1() {
+  getUsers() {
     const params = new HttpParams ()
       .set('page',1);
 
