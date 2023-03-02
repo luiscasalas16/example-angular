@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NgContainerComponent } from './ng-container/ng-container.component';
+import { NgTemplateComponent } from './ng-template/ng-template.component';
 import { ViewChildComponent } from './view-child/view-child.component';
+
 import { MasterComponent } from '../shared/components/master/master.component';
 
 const routes: Routes =
@@ -10,6 +13,8 @@ const routes: Routes =
     component: MasterComponent,
     children: 
     [
+      { path: 'ng-container', component: NgContainerComponent },
+      { path: 'ng-template', component: NgTemplateComponent },
       { path: 'view-child', component: ViewChildComponent }
     ]
   }

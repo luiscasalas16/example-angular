@@ -5,128 +5,28 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a routerLink="/home" class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-
-            <li class="nav-item">
-                <a routerLink="/about/application" class="nav-link" href="#">About-App</a>
-            </li>
-
-            <li class="nav-item">
-                <a routerLink="/about/developer" class="nav-link" href="#">About-Dev</a>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Components
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/components/bindings" class="dropdown-item" href="#">Bindings</a></li>
-                    <li><a routerLink="/components/lifecycle" class="dropdown-item" href="#">Lifecycle</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Templates
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/templates/pipes/built-in" class="dropdown-item" href="#">Pipes - Built-In</a></li>
-                    <li><a routerLink="/templates/pipes/custom" class="dropdown-item" href="#">Pipes - Custom</a></li>
-                </ul>
-            </li>
-            
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Directives
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/directives/attribute-directives" class="dropdown-item" href="#">Attribute-Directives</a></li>
-                    <li><a routerLink="/directives/structural-directives" class="dropdown-item" href="#">Structural-Directives</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Routes
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/routes/main" class="dropdown-item" href="#">Main</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Forms
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/frms/basic" class="dropdown-item" href="#">Basic</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a routerLink="/frms/template/basic" class="dropdown-item" href="#">Template - Basic</a></li>
-                    <li><a routerLink="/frms/template/dynamic" class="dropdown-item" href="#">Template - Dynamic</a></li>
-                    <li><a routerLink="/frms/template/validations" class="dropdown-item" href="#">Template - Validations</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a routerLink="/frms/reactive/basic" class="dropdown-item" href="#">Reactive - Basic</a></li>
-                    <li><a routerLink="/frms/reactive/dynamic" class="dropdown-item" href="#">Reactive - Dynamic</a></li>
-                    <li><a routerLink="/frms/reactive/validations" class="dropdown-item" href="#">Reactive - Validations</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Http
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/http/basic" class="dropdown-item" href="#">Basic</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Imports
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/imports/basic" class="dropdown-item" href="#">Basic</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Api
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/api/view-child" class="dropdown-item" href="#">View-Child</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Tools
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/tools/commands" class="dropdown-item" href="#">Commands</a></li>
-                    <li><a routerLink="/tools/environments" class="dropdown-item" href="#">Environments</a></li>
-                </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Examples
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a routerLink="/examples/counter" class="dropdown-item" href="#">Counter</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a routerLink="/examples/heroes" class="dropdown-item" href="#">Heroes</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a routerLink="/examples/gifs" class="dropdown-item" href="#">Gifs</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a routerLink="/examples/countries/countrybycapital" class="dropdown-item" href="#">Countries by Capital</a></li>
-                    <li><a routerLink="/examples/countries/countrybyname" class="dropdown-item" href="#">Countries by Name</a></li>
-                </ul>
-            </li>
-        </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ng-container *ngFor="let menu of menus">
+                    <li class="nav-item" *ngIf="!!!menu.items; else DROPDOWN">
+                        <a routerLink="{{menu.route}}" class="nav-link" href="#">{{menu.name}}</a>
+                    </li>
+                    <ng-template #DROPDOWN>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{menu.name}}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <ng-container *ngFor="let item of menu.items">
+                                    <li *ngIf="!item.empty; else EMPTY"><a routerLink="{{item.route}}" class="dropdown-item" href="#">{{item.name}}</a></li>
+                                    <ng-template #EMPTY>
+                                        <li><hr class="dropdown-divider"></li>
+                                    </ng-template>
+                                </ng-container>
+                            </ul>
+                        </li>
+                    </ng-template>
+                </ng-container>
+            </ul>
         </div>
     </div>
 </nav>
