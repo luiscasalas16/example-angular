@@ -58,7 +58,9 @@ export class MenuComponent {
             { empty : true},
             { name : 'Gifs', route : '/examples/gifs' },
             { empty : true},
-            { name : 'Countries by Name', route : '/examples/countries/countrybyname' }, { name : 'Countries by Capital', route : '/examples/countries/countrybycapital' }
+            { name : 'Countries by Name', route : '/examples/countries/countrybyname' }, { name : 'Countries by Capital', route : '/examples/countries/countrybycapital' },
+            { empty : true},
+            { name : 'Selectors', route : '/examples/selectors' }
         ] 
       },
     ];

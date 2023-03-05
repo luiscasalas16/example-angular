@@ -15,6 +15,7 @@ import { GifSearchComponent } from './03gifs/gif-search/gif-search.component';
 import { GifResultsComponent } from './03gifs/gif-results/gif-results.component';
 import { GifMainComponent } from './03gifs/gif-main/gif-main.component';
 import { GifsService } from './03gifs/services/gifs.service';
+
 import { CountryMainComponent } from './04countries/pages/country-main/country-main.component';
 import { CountryByNameComponent } from './04countries/pages/country-by-name/country-by-name.component';
 import { CountryByCapitalComponent } from './04countries/pages/country-by-capital/country-by-capital.component';
@@ -22,6 +23,9 @@ import { CountryDetailComponent } from './04countries/pages/country-detail/count
 import { CountrySearchComponent } from './04countries/components/country-search/country-search.component';
 import { CountryTableComponent } from './04countries/components/country-table/country-table.component';
 import { CountriesService } from './04countries/services/countries.service';
+
+import { SelectorsMainComponent } from './05selectors/selectors-main/selectors-main.component';
+
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -38,7 +42,8 @@ import { SharedModule } from '../shared/shared.module';
     CountryByCapitalComponent,
     CountryDetailComponent,
     CountrySearchComponent,
-    CountryTableComponent
+    CountryTableComponent,
+    SelectorsMainComponent
   ],
   imports: [
     CommonModule,

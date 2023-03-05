@@ -8,6 +8,7 @@ import { CountryMainComponent } from './04countries/pages/country-main/country-m
 import { CountryByCapitalComponent } from './04countries/pages/country-by-capital/country-by-capital.component';
 import { CountryByNameComponent } from './04countries/pages/country-by-name/country-by-name.component';
 import { CountryDetailComponent } from './04countries/pages/country-detail/country-detail.component';
+import { SelectorsMainComponent } from './05selectors/selectors-main/selectors-main.component';
 import { MasterComponent } from '../shared/components/master/master.component';
 
 const routes: Routes = 
@@ -30,6 +31,7 @@ const routes: Routes =
           { path: 'countrydetail/:id', component: CountryDetailComponent },
         ]
       },
+      { path: 'selectors', component: SelectorsMainComponent },
     ]
   }
 ];
