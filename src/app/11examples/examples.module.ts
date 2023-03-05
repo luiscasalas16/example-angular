@@ -26,6 +26,10 @@ import { CountriesService } from './04countries/services/countries.service';
 
 import { SelectorsMainComponent } from './05selectors/selectors-main/selectors-main.component';
 
+import { ChartsMainComponent } from './06charts/chats-main/charts-main.component';
+
+import { MapsMainComponent } from './07maps/maps-main/maps-main.component';
+
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -43,7 +47,9 @@ import { SharedModule } from '../shared/shared.module';
     CountryDetailComponent,
     CountrySearchComponent,
     CountryTableComponent,
-    SelectorsMainComponent
+    SelectorsMainComponent,
+    ChartsMainComponent,
+    MapsMainComponent
   ],
   imports: [
     CommonModule,

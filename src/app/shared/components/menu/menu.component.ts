@@ -60,7 +60,11 @@ export class MenuComponent {
             { empty : true},
             { name : 'Countries by Name', route : '/examples/countries/countrybyname' }, { name : 'Countries by Capital', route : '/examples/countries/countrybycapital' },
             { empty : true},
-            { name : 'Selectors', route : '/examples/selectors' }
+            { name : 'Selectors', route : '/examples/selectors' },
+            { empty : true},
+            { name : 'Charts', route : '/examples/charts' },
+            { empty : true},
+            { name : 'Maps', route : '/examples/maps' }
         ] 
       },
     ];
