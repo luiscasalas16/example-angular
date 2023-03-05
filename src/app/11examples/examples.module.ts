@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { NgChartsModule } from 'ng2-charts';
+
 import { ExamplesRoutingModule } from './examples-routing.module';
 
 import { CounterComponent } from './01counter/counter.component';
@@ -26,7 +28,9 @@ import { CountriesService } from './04countries/services/countries.service';
 
 import { SelectorsMainComponent } from './05selectors/selectors-main/selectors-main.component';
 
-import { ChartsMainComponent } from './06charts/chats-main/charts-main.component';
+import { ChartsMainComponent } from './06charts/charts-main/chats-main.component';
+import { ChartBarComponent } from './06charts/components/chart-bar/chart-bar.component';
+import { ChartLineComponent } from './06charts/components/chart-line/chart-line.component';
 
 import { MapsMainComponent } from './07maps/maps-main/maps-main.component';
 
@@ -49,12 +53,15 @@ import { SharedModule } from '../shared/shared.module';
     CountryTableComponent,
     SelectorsMainComponent,
     ChartsMainComponent,
+    ChartBarComponent,
+    ChartLineComponent,
     MapsMainComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    NgChartsModule,
     ExamplesRoutingModule
   ],
   providers: [

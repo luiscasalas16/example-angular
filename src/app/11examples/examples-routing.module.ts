@@ -9,7 +9,7 @@ import { CountryByCapitalComponent } from './04countries/pages/country-by-capita
 import { CountryByNameComponent } from './04countries/pages/country-by-name/country-by-name.component';
 import { CountryDetailComponent } from './04countries/pages/country-detail/country-detail.component';
 import { SelectorsMainComponent } from './05selectors/selectors-main/selectors-main.component';
-import { ChartsMainComponent } from './06charts/chats-main/charts-main.component';
+import { ChartsMainComponent } from './06charts/charts-main/chats-main.component';
 import { MapsMainComponent } from './07maps/maps-main/maps-main.component';
 import { MasterComponent } from '../shared/components/master/master.component';
 
