@@ -18,7 +18,7 @@ A continuación, un conjunto de direcciones que pueden ser de interés.
 
 ---
 ### Artículos
-- [...](https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application) - instalar bootstrap en una aplicación en angular
+- [URL](https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application) - instalar bootstrap en una aplicación en angular
 
 ---
 ### Paquetes
