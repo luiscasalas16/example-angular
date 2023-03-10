@@ -1,1 +1,29 @@
-<p>maps-main works!</p>
+<h2>Examples / Maps</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <div class="row">
+            <div class="col-4 mb-2"
+                 *ngFor="let place of places">
+                <div class="card">
+                    <app-map-small [lngLat]="place.lngLat"  class="card-img-top"></app-map-small>
+                    <div class="card-body">
+                        <p class="card-text"> {{ place.title }} </p>
+                        <a href="#" class="btn btn-primary" (click)="go($event, place.lngLat)">Go</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <app-map-full [initialPlace]="initialPlace" [goPlace]="goPlace"></app-map-full>
+    </div>
+
+    <div class="col-12">
+        <br>
+        <h4>References</h4>
+        <a href="https://docs.mapbox.com/mapbox-gl-js/guides/install" target="_blank">https://docs.mapbox.com/mapbox-gl-js/guides/install</a>
+    </div>
+</div>

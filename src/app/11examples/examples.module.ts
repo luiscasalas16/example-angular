@@ -33,6 +33,8 @@ import { ChartBarComponent } from './06charts/components/chart-bar/chart-bar.com
 import { ChartLineComponent } from './06charts/components/chart-line/chart-line.component';
 
 import { MapsMainComponent } from './07maps/maps-main/maps-main.component';
+import { MapSmallComponent } from './07maps/components/map-small/map-small.component';
+import { MapFullComponent } from './07maps/components/map-full/map-full.component';
 
 import { SharedModule } from '../shared/shared.module';
 
@@ -55,7 +57,9 @@ import { SharedModule } from '../shared/shared.module';
     ChartsMainComponent,
     ChartBarComponent,
     ChartLineComponent,
-    MapsMainComponent
+    MapsMainComponent,
+    MapSmallComponent,
+    MapFullComponent
   ],
   imports: [
     CommonModule,
