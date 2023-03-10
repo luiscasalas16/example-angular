@@ -27,6 +27,23 @@ export class MenuComponent {
       { name : 'Home', route : '/home' },
       { name : 'About-App', route : '/about/application' },
       { name : 'About-Dev', route : '/about/developer' },
+      { name : 'Examples', items : 
+        [ 
+            { name : 'Counter', route : '/examples/counter' },
+            { empty : true},
+            { name : 'Heroes', route : '/examples/heroes' },
+            { empty : true},
+            { name : 'Gifs', route : '/examples/gifs' },
+            { empty : true},
+            { name : 'Countries by Name', route : '/examples/countries/countrybyname' }, { name : 'Countries by Capital', route : '/examples/countries/countrybycapital' },
+            { empty : true},
+            { name : 'Selectors', route : '/examples/selectors' },
+            { empty : true},
+            { name : 'Charts', route : '/examples/charts' },
+            { empty : true},
+            { name : 'Maps', route : '/examples/maps' }
+        ] 
+      },
       { name : 'Components', items : [{ name : 'Bindings', route : '/components/bindings' }, { name : 'Lifecycle', route : '/components/lifecycle' }] },
       { name : 'Templates', items : [{ name : 'Pipes - Built-In', route : '/templates/pipes/built-in' }, { name : 'Pipes - Custom', route : '/templates/pipes/custom' }] },
       { name : 'Directives', items : [{ name : 'Attribute-Directives', route : '/directives/attribute-directives' }, { name : 'Structural-Directives', route : '/directives/structural-directives' }] },
@@ -50,23 +67,6 @@ export class MenuComponent {
         ] 
       },
       { name : 'Tools', items : [{ name : 'Commands', route : '/tools/commands' }, { name : 'Environments', route : '/tools/environments' }] },
-      { name : 'Examples', items : 
-        [ 
-            { name : 'Counter', route : '/examples/counter' },
-            { empty : true},
-            { name : 'Heroes', route : '/examples/heroes' },
-            { empty : true},
-            { name : 'Gifs', route : '/examples/gifs' },
-            { empty : true},
-            { name : 'Countries by Name', route : '/examples/countries/countrybyname' }, { name : 'Countries by Capital', route : '/examples/countries/countrybycapital' },
-            { empty : true},
-            { name : 'Selectors', route : '/examples/selectors' },
-            { empty : true},
-            { name : 'Charts', route : '/examples/charts' },
-            { empty : true},
-            { name : 'Maps', route : '/examples/maps' }
-        ] 
-      },
     ];
   }
 }

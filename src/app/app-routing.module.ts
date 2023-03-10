@@ -44,6 +44,10 @@ const routes: Routes =
   },
   //lazy example
   {
+	  path: 'examples',
+	  loadChildren: () => import('./00examples/examples.module').then( m => m.ExamplesModule )
+  },
+  {
 	  path: 'components',
 	  loadChildren: () => import('./01components/components.module').then( m => m.ComponentsModule )
   },
@@ -82,10 +86,6 @@ const routes: Routes =
   {
 	  path: 'tools',
 	  loadChildren: () => import('./10tools/tools.module').then( m => m.ToolsModule )
-  },
-  {
-	  path: 'examples',
-	  loadChildren: () => import('./11examples/examples.module').then( m => m.ExamplesModule )
   },
   //not fount route example
   { 
