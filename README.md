@@ -1,4 +1,4 @@
-# example-angular
+# notes-angular
 
 Esta aplicación contiene ejemplos y pruebas de angular. La intención de la aplicación es permitir refrescar rápidamente el conocimiento si hay que retomar el uso de la tecnología luego de algún tiempo sin trabajar en ella, o tener referencias de código fuente a la mano.
 
@@ -13,12 +13,12 @@ A continuación, un conjunto de direcciones que pueden ser de interés.
 
 ---
 ### Documentación
-- [https://angular-university.io/home](https://angular-university.io/home)
 - [https://angular.io](https://angular.io)
+- [https://angular-university.io/home](https://angular-university.io/home)
 
 ---
 ### Artículos
-- [https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application](https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application) - instalar bootstrap en una aplicación en angular
+- [...](https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application) - instalar bootstrap en una aplicación en angular
 
 ---
 ### Paquetes
