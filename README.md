@@ -2,9 +2,7 @@
 
 Esta aplicación contiene ejemplos y pruebas de angular. La intención de la aplicación es permitir refrescar rápidamente el conocimiento si hay que retomar el uso de la tecnología luego de algún tiempo sin trabajar en ella, o tener referencias de código fuente a la mano.
 
-La aplicación está disponible en línea en la siguiente dirección [https://luiscasalas16.github.io/notes-angular](https://luiscasalas16.github.io/notes-angular).
-
-La aplicación utiliza Angular 15.1.0. Comandos para generar el proyecto:
+La aplicación está disponible en línea en la siguiente dirección [https://luiscasalas16.github.io/notes-angular](https://luiscasalas16.github.io/notes-angular). Los comandos para ejecutar la aplicación son:
 - npm install
 - ng serve -o 
 - ng build --output-path docs --base-href /notes-angular/
