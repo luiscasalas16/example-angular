@@ -5,7 +5,7 @@ Esta aplicación contiene ejemplos y pruebas de angular. Está disponible en lí
 - ng serve -o 
 - ng build --output-path docs --base-href /notes-angular/
 
-A continuación, un conjunto de direcciones que pueden ser de interés.
+A continuación, un conjunto de enlaces de interés.
 
 ---
 ### Documentación
