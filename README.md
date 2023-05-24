@@ -22,3 +22,9 @@ A continuación, un conjunto de enlaces de interés.
 - bibliotecas de paquetes de controles
     - [https://primeng.org](https://primeng.org)
     - [https://material.angular.io](https://material.angular.io)
+    
+---
+### Ejemplos
+- [https://code-maze.com/net-core-series/](https://code-maze.com/net-core-series/)
+- [https://code-maze.com/angular-series/](https://code-maze.com/angular-series/)
+- [https://code-maze.com/angular-material-table/](https://code-maze.com/angular-material-series/)
