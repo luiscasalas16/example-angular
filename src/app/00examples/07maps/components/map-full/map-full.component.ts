@@ -7,16 +7,15 @@ import { Subject } from 'rxjs';
   templateUrl: './map-full.component.html',
   styles: [
     `
-    #mapa {
-      height: 350px;
-      width: 100%; 
-    }
-    `
-  ]
+      #mapa {
+        height: 350px;
+        width: 100%;
+      }
+    `,
+  ],
 })
-export class MapFullComponent implements OnInit  {
-
-  @Input() initialPlace: [number, number] = [0,0];
+export class MapFullComponent implements OnInit {
+  @Input() initialPlace: [number, number] = [0, 0];
   @Input() goPlace: Subject<[number, number]> = new Subject();
 
   ngOnInit(): void {
@@ -24,12 +23,12 @@ export class MapFullComponent implements OnInit  {
       container: 'mapa',
       style: 'mapbox://styles/mapbox/streets-v11',
       center: this.initialPlace,
-      zoom: 15
+      zoom: 15,
     });
 
-    this.goPlace.subscribe(lngLat => {
+    this.goPlace.subscribe((lngLat) => {
       map.flyTo({
-        center: lngLat
+        center: lngLat,
       });
     });
   }

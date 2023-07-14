@@ -1,5 +1,4 @@
 export interface Country {
-    name: string;
-    population: number;
-  }
-  
+  name: string;
+  population: number;
+}

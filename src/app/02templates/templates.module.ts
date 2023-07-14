@@ -9,15 +9,7 @@ import { SortPipe } from './pipes/custom/sort.pipe';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    BuiltInComponent,
-    CustomComponent,
-    SortPipe
-  ],
-  imports: [
-    CommonModule,
-    TemplatesRoutingModule,
-    SharedModule
-  ]
+  declarations: [BuiltInComponent, CustomComponent, SortPipe],
+  imports: [CommonModule, TemplatesRoutingModule, SharedModule],
 })
-export class TemplatesModule { }
+export class TemplatesModule {}

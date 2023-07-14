@@ -1,14 +1,33 @@
-import { Component, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnChanges,
+  DoCheck,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy,
+  SimpleChanges,
+} from '@angular/core';
 import { Subscription, interval } from 'rxjs';
 
 @Component({
   selector: 'app-lifecycle',
   templateUrl: './lifecycle.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
-
+export class LifecycleComponent
+  implements
+    OnInit,
+    OnChanges,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked,
+    OnDestroy
+{
   text: string = '';
 
   timer!: Subscription;
@@ -21,11 +40,11 @@ export class LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterCont
   ngOnInit(): void {
     console.log('ngOnInit');
 
-    this.timer = interval(5000).subscribe( i => {
+    this.timer = interval(5000).subscribe((i) => {
       console.log('timer event');
 
       this.counter = i;
-    })
+    });
   }
 
   ngOnChanges(changes: SimpleChanges): void {

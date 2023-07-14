@@ -21,12 +21,8 @@ import { InternalComponent } from './internal/internal.component';
     QueryParamsComponent,
     CustomMasterComponent,
     ExternalComponent,
-    InternalComponent
+    InternalComponent,
   ],
-  imports: [
-    CommonModule,
-    RoutesRoutingModule,
-    SharedModule
-  ]
+  imports: [CommonModule, RoutesRoutingModule, SharedModule],
 })
-export class RoutesModule { }
+export class RoutesModule {}

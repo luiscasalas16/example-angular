@@ -4,20 +4,17 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-query-params',
   templateUrl: './query-params.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class QueryParamsComponent implements OnInit {
+  page: string = '';
+  sort: string = '';
+  order: string = '';
 
-  page : string = '';
-  sort : string = '';
-  order : string = '';
-
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.activatedRoute.queryParams
-    .subscribe(params => {
+    this.activatedRoute.queryParams.subscribe((params) => {
       this.page = params['page'] ?? 'empty';
       this.sort = params['sort'] ?? 'empty';
       this.order = params['order'] ?? 'empty';

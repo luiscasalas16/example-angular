@@ -4,14 +4,12 @@ import * as uuid from 'uuid';
 @Component({
   selector: 'app-basic',
   templateUrl: './basic.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class BasicComponent {
+  guid: string = '';
 
-  guid : string = '';
-
-  constructor(){
+  constructor() {
     this.guid = uuid.v4();
   }
 }

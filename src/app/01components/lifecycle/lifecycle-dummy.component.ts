@@ -3,15 +3,14 @@ import { Component, OnChanges, SimpleChanges, Input } from '@angular/core';
 @Component({
   selector: 'app-lifecycle-dummy',
   templateUrl: './lifecycle-dummy.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class LifecycleDummyComponent implements OnChanges {
   @Input() text!: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("ngOnChanges - Dummy")
+    console.log('ngOnChanges - Dummy');
   }
 }

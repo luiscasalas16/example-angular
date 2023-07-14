@@ -4,16 +4,14 @@ import { Subject } from 'rxjs';
 @Component({
   selector: 'app-country-search',
   templateUrl: './country-search.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class CountrySearchComponent {
+  @Output() onEnter: EventEmitter<string> = new EventEmitter();
 
-  @Output() onEnter : EventEmitter<string> = new EventEmitter();
+  @Input() placeholder: string = '';
 
-  @Input() placeholder : string = '';
-
-  seachText : string = '';
+  seachText: string = '';
 
   search() {
     this.onEnter.emit(this.seachText);

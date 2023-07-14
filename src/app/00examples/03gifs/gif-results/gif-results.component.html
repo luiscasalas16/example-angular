@@ -1,11 +1,11 @@
 <div class="row row-cols-1 row-cols-md-4 g-4">
-    <div *ngFor="let result of results" class="col">
-
-        <div class="card">
-            <img [src]="result.images.downsized_medium.url" 
-                 [alt]="result.title"
-                 class="card-img-top mx-auto">
-        </div>
-
+  <div *ngFor="let result of results" class="col">
+    <div class="card">
+      <img
+        [src]="result.images.downsized_medium.url"
+        [alt]="result.title"
+        class="card-img-top mx-auto"
+      />
     </div>
+  </div>
 </div>

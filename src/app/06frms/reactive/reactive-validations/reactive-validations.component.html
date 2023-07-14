@@ -1,96 +1,105 @@
 <h2>Forms / Reactive / Validations</h2>
-<hr>
+<hr />
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <form (ngSubmit)="submit()" autocomplete="off" [formGroup]="myForm">
-                
-                <div class="mb-3 row">
-                    <label class="col-sm-3 col-form-label">Identification Card (#-####-####)</label>
-                    <div class="col-sm-9">
-                        <input type="text"
-                               class="form-control"
-                               formControlName="id">
-                        <span class="form-text text-danger" *ngIf="controlValid('id')">
-                            <div *ngIf="myForm.get('id')?.errors?.['required']">
-                                Identification card is required.
-                            </div>
-                            <div *ngIf="myForm.get('id')?.errors?.['regex']">
-                                Invalid identification card format.
-                            </div>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="mb-3 row">
-                    <label class="col-sm-3 col-form-label">Password 1</label>
-                    <div class="col-sm-9">
-                        <input type="text"
-                               class="form-control"
-                               formControlName="password1">
-                        <span class="form-text text-danger" *ngIf="controlValid('password1')">
-                            Password 1 is required.
-                        </span>
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label class="col-sm-3 col-form-label">Password 2</label>
-                    <div class="col-sm-9">
-                        <input type="text"
-                               class="form-control"
-                               formControlName="password2">
-                        <span class="form-text text-danger" *ngIf="controlValid('password2')">
-                            Password 2 is required.
-                        </span>
-                    </div>
-                </div>
-                <div *ngIf="myForm.errors?.['password'] && (myForm.touched || myForm.dirty)" class="cross-validation-error-message alert alert-danger">
-                    Passwords not match.
-                </div>
-
-                <div class="mb-3 row">
-                    <label class="col-sm-3 col-form-label">User</label>
-                    <div class="col-sm-9">
-                        <input type="text"
-                               class="form-control"
-                               formControlName="user">
-                        <span class="form-text text-danger" *ngIf="controlValid('user')">
-                            <div *ngIf="myForm.get('user')?.errors?.['required']">
-                                User is required.
-                            </div>
-                            <div *ngIf="myForm.get('user')?.errors?.['username']">
-                                User is already exists.
-                            </div>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <button type="submit"
-                                class="btn btn-primary float-end">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </form>
+  <div class="row">
+    <div class="col">
+      <form (ngSubmit)="submit()" autocomplete="off" [formGroup]="myForm">
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label"
+            >Identification Card (#-####-####)</label
+          >
+          <div class="col-sm-9">
+            <input type="text" class="form-control" formControlName="id" />
+            <span class="form-text text-danger" *ngIf="controlValid('id')">
+              <div *ngIf="myForm.get('id')?.errors?.['required']">
+                Identification card is required.
+              </div>
+              <div *ngIf="myForm.get('id')?.errors?.['regex']">
+                Invalid identification card format.
+              </div>
+            </span>
+          </div>
         </div>
-    </div>
-    
-    <div class="row">
-        <div class="col">
-            <span>Valid</span>
-            <pre>{{ myForm.valid }}</pre>
-    
-            <span>Pristine</span>
-            <pre>{{ myForm.pristine }}</pre>
-    
-            <span>Touched</span>
-            <pre>{{ myForm.touched }}</pre>
-    
-            <span>Value</span>
-            <pre>{{ myForm.value | json }}</pre>
+
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Password 1</label>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="password1"
+            />
+            <span
+              class="form-text text-danger"
+              *ngIf="controlValid('password1')"
+            >
+              Password 1 is required.
+            </span>
+          </div>
         </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Password 2</label>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="password2"
+            />
+            <span
+              class="form-text text-danger"
+              *ngIf="controlValid('password2')"
+            >
+              Password 2 is required.
+            </span>
+          </div>
+        </div>
+        <div
+          *ngIf="myForm.errors?.['password'] && (myForm.touched || myForm.dirty)"
+          class="cross-validation-error-message alert alert-danger"
+        >
+          Passwords not match.
+        </div>
+
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">User</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" formControlName="user" />
+            <span class="form-text text-danger" *ngIf="controlValid('user')">
+              <div *ngIf="myForm.get('user')?.errors?.['required']">
+                User is required.
+              </div>
+              <div *ngIf="myForm.get('user')?.errors?.['username']">
+                User is already exists.
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button type="submit" class="btn btn-primary float-end">
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <span>Valid</span>
+      <pre>{{ myForm.valid }}</pre>
+
+      <span>Pristine</span>
+      <pre>{{ myForm.pristine }}</pre>
+
+      <span>Touched</span>
+      <pre>{{ myForm.touched }}</pre>
+
+      <span>Value</span>
+      <pre>{{ myForm.value | json }}</pre>
+    </div>
+  </div>
 </div>

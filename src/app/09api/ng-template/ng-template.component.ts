@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-ng-template',
   templateUrl: './ng-template.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class NgTemplateComponent {
-
-}
+export class NgTemplateComponent {}

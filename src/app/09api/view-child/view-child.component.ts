@@ -3,15 +3,14 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 @Component({
   selector: 'app-view-child',
   templateUrl: './view-child.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class ViewChildComponent {
   @ViewChild('paragraph') paragraphContainer!: ElementRef<HTMLElement>;
 
   changeColor() {
-    let containerElement : HTMLElement = this.paragraphContainer.nativeElement;
-    
-    containerElement.style.backgroundColor = "red";  
+    let containerElement: HTMLElement = this.paragraphContainer.nativeElement;
+
+    containerElement.style.backgroundColor = 'red';
   }
 }

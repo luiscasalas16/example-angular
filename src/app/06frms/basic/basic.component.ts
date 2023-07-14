@@ -3,18 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-base',
   templateUrl: './basic.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class BasicComponent {
-
-  submitWithout(event : any) : void {
+  submitWithout(event: any): void {
     event.preventDefault();
 
-    console.log("submitWithout");
+    console.log('submitWithout');
   }
 
   submitWith() {
-    console.log("submitWith");
+    console.log('submitWith');
   }
 }

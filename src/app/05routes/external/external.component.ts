@@ -4,15 +4,13 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-external',
   templateUrl: './external.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class ExternalComponent {
-
-  constructor (private router: Router) { }
+  constructor(private router: Router) {}
 
   btn1() {
-    sessionStorage.setItem('token','123');
+    sessionStorage.setItem('token', '123');
 
     this.router.navigate(['/routes/internal']);
   }

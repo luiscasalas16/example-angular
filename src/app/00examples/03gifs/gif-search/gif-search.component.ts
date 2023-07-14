@@ -4,21 +4,17 @@ import { GifsService } from '../services/gifs.service';
 @Component({
   selector: 'app-gif-search',
   templateUrl: './gif-search.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class GifSearchComponent {
+  @ViewChild('txtSearch') txtSearch!: ElementRef<HTMLInputElement>;
 
-  @ViewChild('txtSearch') txtSearch!:ElementRef<HTMLInputElement>;
-
-  constructor( private gifsService: GifsService ) {}
+  constructor(private gifsService: GifsService) {}
 
   search() {
-    
     const value = this.txtSearch.nativeElement.value;
 
-    if ( value.trim().length === 0 )
-      return;
+    if (value.trim().length === 0) return;
 
     this.gifsService.searchGifs(value);
 

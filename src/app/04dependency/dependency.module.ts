@@ -4,13 +4,8 @@ import { CommonModule } from '@angular/common';
 import { DependencyRoutingModule } from './dependency-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    DependencyRoutingModule,
-    SharedModule
-  ]
+  imports: [CommonModule, DependencyRoutingModule, SharedModule],
 })
-export class DependencyModule { }
+export class DependencyModule {}

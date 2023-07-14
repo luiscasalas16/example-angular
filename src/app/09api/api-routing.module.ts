@@ -6,22 +6,20 @@ import { ViewChildComponent } from './view-child/view-child.component';
 
 import { MasterComponent } from '../shared/components/master/master.component';
 
-const routes: Routes =
-[
-  { 
-    path: '', 
+const routes: Routes = [
+  {
+    path: '',
     component: MasterComponent,
-    children: 
-    [
+    children: [
       { path: 'ng-container', component: NgContainerComponent },
       { path: 'ng-template', component: NgTemplateComponent },
-      { path: 'view-child', component: ViewChildComponent }
-    ]
-  }
+      { path: 'view-child', component: ViewChildComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ApiRoutingModule { }
+export class ApiRoutingModule {}

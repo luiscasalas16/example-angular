@@ -3,20 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { BasicComponent } from './basic/basic.component';
 import { MasterComponent } from '../shared/components/master/master.component';
 
-const routes: Routes =
-[
-  { 
-    path: '', 
+const routes: Routes = [
+  {
+    path: '',
     component: MasterComponent,
-    children: 
-    [
-      { path: 'basic', component: BasicComponent }
-    ]
-  }
+    children: [{ path: 'basic', component: BasicComponent }],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class HttpRoutingModule { }
+export class HttpRoutingModule {}

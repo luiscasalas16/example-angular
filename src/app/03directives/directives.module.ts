@@ -9,15 +9,7 @@ import { StructuralDirectivesComponent } from './structural-directives/structura
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AttributeDirectivesComponent,
-    StructuralDirectivesComponent,
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    DirectivesRoutingModule,
-    SharedModule
-  ]
+  declarations: [AttributeDirectivesComponent, StructuralDirectivesComponent],
+  imports: [CommonModule, FormsModule, DirectivesRoutingModule, SharedModule],
 })
-export class DirectivesModule { }
+export class DirectivesModule {}

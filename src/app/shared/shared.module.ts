@@ -12,16 +12,9 @@ import { MasterComponent } from './components/master/master.component';
     ErrorComponent,
     NotFoundComponent,
     MenuComponent,
-    MasterComponent
+    MasterComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [
-    ErrorComponent,
-    NotFoundComponent,
-    MenuComponent
-  ]
+  imports: [CommonModule, RouterModule],
+  exports: [ErrorComponent, NotFoundComponent, MenuComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

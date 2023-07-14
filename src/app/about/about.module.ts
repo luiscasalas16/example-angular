@@ -12,18 +12,18 @@ import { SharedModule } from '../shared/shared.module';
     //components that the module contains
     AboutComponent,
     DeveloperComponent,
-    ApplicationComponent
+    ApplicationComponent,
   ],
   imports: [
     //modules that are imported into the module
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
   ],
-  exports	: [
+  exports: [
     //components that are exported from the module
     DeveloperComponent,
-    ApplicationComponent
+    ApplicationComponent,
   ],
 })
-export class AboutModule { }
+export class AboutModule {}

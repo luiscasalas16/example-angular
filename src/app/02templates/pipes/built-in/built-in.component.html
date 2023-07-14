@@ -1,86 +1,107 @@
 <h2>Templates / Pipes / Built-In</h2>
 
-<hr><h4>texts</h4>
+<hr />
+<h4>texts</h4>
 
 <p>{{ text }}</p>
 <p>uppercase : {{ text | uppercase }}</p>
 <p>uppercase : {{ text | lowercase }}</p>
 <p>uppercase : {{ text | titlecase }}</p>
 
-<hr><h4>date</h4>
+<hr />
+<h4>date</h4>
 
 <p>{{ date }}</p>
-<p>date : {{ date | date }} </p>
-<p>date:'short' : {{ date | date:'short' }} </p>
-<p>date:'long' : {{ date | date:'long' }} </p>
-<p>date:'dd - MMMM - yyyy' : {{ date | date:'dd - MMMM - yyyy' }} </p>
-<p>date:'long':'':'en' : {{ date | date:'long':'':'en' }} </p>
-<p>date:'long':'':'fr' : {{ date | date:'long':'':'fr' }} </p>
-<p>date:'long':'GMT-0' : {{ date | date:'long':'GMT-0' }} </p>
+<p>date : {{ date | date }}</p>
+<p>date:'short' : {{ date | date : "short" }}</p>
+<p>date:'long' : {{ date | date : "long" }}</p>
+<p>date:'dd - MMMM - yyyy' : {{ date | date : "dd - MMMM - yyyy" }}</p>
+<p>date:'long':'':'en' : {{ date | date : "long" : "" : "en" }}</p>
+<p>date:'long':'':'fr' : {{ date | date : "long" : "" : "fr" }}</p>
+<p>date:'long':'GMT-0' : {{ date | date : "long" : "GMT-0" }}</p>
 
-<hr><h4>number</h4>
+<hr />
+<h4>number</h4>
 
 <p>{{ pi }}</p>
-<p>number : {{pi | number}}</p>
-<p>number:'':'en' : {{pi | number:'':'en'}}</p>
-<p>number:'':'fr' : {{pi | number:'':'fr'}}</p>
-<p>number:'0.1-3': {{pi | number:'0.1-3'}}</p>
-<p>number:'0.3-3': {{pi | number:'0.3-3'}}</p>
-<p>number:'1.0-0': {{pi | number:'1.0-0'}}</p>
-<p>number:'3.0-0': {{pi | number:'3.0-0'}}</p>
+<p>number : {{ pi | number }}</p>
+<p>number:'':'en' : {{ pi | number : "" : "en" }}</p>
+<p>number:'':'fr' : {{ pi | number : "" : "fr" }}</p>
+<p>number:'0.1-3': {{ pi | number : "0.1-3" }}</p>
+<p>number:'0.3-3': {{ pi | number : "0.3-3" }}</p>
+<p>number:'1.0-0': {{ pi | number : "1.0-0" }}</p>
+<p>number:'3.0-0': {{ pi | number : "3.0-0" }}</p>
 
-<hr><h4>currency</h4>
+<hr />
+<h4>currency</h4>
 
 <p>{{ currency }}</p>
-<p>currency : {{currency | currency}}</p>
-<p>currency:'CRC' : {{currency | currency:'CRC'}}</p>
-<p>currency:'USD' : {{currency | currency:'USD'}}</p>
-<p>currency:'CRC':'code' : {{currency | currency:'CRC':'code'}}</p>
-<p>currency:'USD':'code' : {{currency | currency:'USD':'code'}}</p>
-<p>currency:'CRC':'symbol':'0.2-2' : {{currency | currency:'CRC':'symbol':'0.2-2'}}</p>
-<p>currency:'EUR':'symbol':'0.2-2':'fr' : {{currency | currency:'EUR':'symbol':'0.2-2':'fr'}}</p>
-<p>currency:'CRC':'symbol-narrow':'0.2-2' : {{currency | currency:'CRC':'symbol-narrow':'0.2-2'}}</p>
-<p>currency:'EUR':'symbol-narrow':'0.2-2':'fr' : {{currency | currency:'EUR':'symbol-narrow':'0.2-2':'fr'}}</p>
-
-<hr><h4>percent</h4>
-
-<p>{{ percent }}</p>
-<p>currency : {{percent | percent}}</p>
-<p>percent:'0.2-2' : {{percent | percent:'0.2-2'}}</p>
-<p>percent:'0.2-2':'fr' : {{percent | percent:'0.2-2':'fr'}}</p>
-
-<hr><h4>i18nSelect</h4>
-
-<p>{{ 'male' | i18nSelect:invites }}</p>
-<p>{{ 'female' | i18nSelect:invites }}</p>
-
-<hr><h4>i18nPlural</h4>
-
-<p>{{ 0 | i18nPlural:clients }}</p>
-<p>{{ 1 | i18nPlural:clients }}</p>
-<p>{{ 5 | i18nPlural:clients }}</p>
-
-<hr><h4>slice</h4>
-<p>slice:0 : '{{str | slice:0}}'</p>
-<p>slice:0:4 : '{{str | slice:0:4}}'</p>
-<p>slice:2:4 : '{{str | slice:2:4}}'</p>
-<p>slice:-4:-2 : '{{str | slice:-4:-2}}'</p>
-<p>slice:-4 : '{{str | slice:-4}}'</p>
-
-<hr><h4>json</h4>
-
-<p>Without JSON pipe:</p>
-<pre>{{object}}</pre>
-<p>With JSON pipe:</p>
-<pre>{{object | json}}</pre>
-
-<hr><h4>keyvalue</h4>
-
-<p *ngFor="let item of invites | keyvalue">
-    {{item.key}}  : {{item.value}}
+<p>currency : {{ currency | currency }}</p>
+<p>currency:'CRC' : {{ currency | currency : "CRC" }}</p>
+<p>currency:'USD' : {{ currency | currency : "USD" }}</p>
+<p>currency:'CRC':'code' : {{ currency | currency : "CRC" : "code" }}</p>
+<p>currency:'USD':'code' : {{ currency | currency : "USD" : "code" }}</p>
+<p>
+  currency:'CRC':'symbol':'0.2-2' :
+  {{ currency | currency : "CRC" : "symbol" : "0.2-2" }}
+</p>
+<p>
+  currency:'EUR':'symbol':'0.2-2':'fr' :
+  {{ currency | currency : "EUR" : "symbol" : "0.2-2" : "fr" }}
+</p>
+<p>
+  currency:'CRC':'symbol-narrow':'0.2-2' :
+  {{ currency | currency : "CRC" : "symbol-narrow" : "0.2-2" }}
+</p>
+<p>
+  currency:'EUR':'symbol-narrow':'0.2-2':'fr' :
+  {{ currency | currency : "EUR" : "symbol-narrow" : "0.2-2" : "fr" }}
 </p>
 
-<hr><h4>async</h4>
+<hr />
+<h4>percent</h4>
+
+<p>{{ percent }}</p>
+<p>currency : {{ percent | percent }}</p>
+<p>percent:'0.2-2' : {{ percent | percent : "0.2-2" }}</p>
+<p>percent:'0.2-2':'fr' : {{ percent | percent : "0.2-2" : "fr" }}</p>
+
+<hr />
+<h4>i18nSelect</h4>
+
+<p>{{ "male" | i18nSelect : invites }}</p>
+<p>{{ "female" | i18nSelect : invites }}</p>
+
+<hr />
+<h4>i18nPlural</h4>
+
+<p>{{ 0 | i18nPlural : clients }}</p>
+<p>{{ 1 | i18nPlural : clients }}</p>
+<p>{{ 5 | i18nPlural : clients }}</p>
+
+<hr />
+<h4>slice</h4>
+<p>slice:0 : '{{ str | slice : 0 }}'</p>
+<p>slice:0:4 : '{{ str | slice : 0 : 4 }}'</p>
+<p>slice:2:4 : '{{ str | slice : 2 : 4 }}'</p>
+<p>slice:-4:-2 : '{{ str | slice : -4 : -2 }}'</p>
+<p>slice:-4 : '{{ str | slice : -4 }}'</p>
+
+<hr />
+<h4>json</h4>
+
+<p>Without JSON pipe:</p>
+<pre>{{ object }}</pre>
+<p>With JSON pipe:</p>
+<pre>{{ object | json }}</pre>
+
+<hr />
+<h4>keyvalue</h4>
+
+<p *ngFor="let item of invites | keyvalue">{{ item.key }} : {{ item.value }}</p>
+
+<hr />
+<h4>async</h4>
 
 <pre *ngIf="!(myObservable | async)">Resolving observable</pre>
 <pre>{{ myObservable | async }}</pre>

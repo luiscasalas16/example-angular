@@ -3,35 +3,31 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-attribute-directives',
   templateUrl: './attribute-directives.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class AttributeDirectivesComponent {
-  
   currentItem: string = '';
 
-  classes1_field =  
-  {
-    'text-capitalize fw-bold': true
+  classes1_field = {
+    'text-capitalize fw-bold': true,
   };
 
-  classes2_field =  
-  {
-    'text-capitalize': true, 
-    'fw-bold': true
+  classes2_field = {
+    'text-capitalize': true,
+    'fw-bold': true,
   };
 
-  getClassObject () : any {
+  getClassObject(): any {
     return {
-      'text-capitalize': true, 
-      'fw-bold': true
+      'text-capitalize': true,
+      'fw-bold': true,
     };
   }
 
-  getStylesObject () : any {
+  getStylesObject(): any {
     return {
       'text-transform': true ? 'capitalize' : '',
-      'font-weight': true ? 'bold' : ''
+      'font-weight': true ? 'bold' : '',
     };
   }
 

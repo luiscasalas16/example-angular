@@ -10,28 +10,31 @@ import { ExternalComponent } from './external/external.component';
 import { InternalComponent } from './internal/internal.component';
 import { InternalGuard } from './internal.guard';
 
-const routes: Routes =
-[
-  { 
-    path: '', 
+const routes: Routes = [
+  {
+    path: '',
     component: CustomMasterComponent,
-    children: 
-    [
-      { path: '',   redirectTo: '/routes/main', pathMatch: 'full' },
+    children: [
+      { path: '', redirectTo: '/routes/main', pathMatch: 'full' },
       { path: 'main', component: MainComponent },
       { path: 'first', component: FirstComponent },
       { path: 'second', component: SecondComponent },
       { path: 'query-params', component: QueryParamsComponent },
       { path: 'route-params/:id', component: RouteParamsComponent },
       { path: 'external', component: ExternalComponent },
-      { path: 'internal', component: InternalComponent, canLoad: [ InternalGuard ], canActivate: [ InternalGuard ]},
-      { path: '**', redirectTo: '/routes/main' }
-    ]
-  }
+      {
+        path: 'internal',
+        component: InternalComponent,
+        canLoad: [InternalGuard],
+        canActivate: [InternalGuard],
+      },
+      { path: '**', redirectTo: '/routes/main' },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class RoutesRoutingModule { }
+export class RoutesRoutingModule {}

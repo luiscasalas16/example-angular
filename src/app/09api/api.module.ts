@@ -9,15 +9,7 @@ import { ViewChildComponent } from './view-child/view-child.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    ViewChildComponent,
-    NgTemplateComponent,
-    NgContainerComponent
-  ],
-  imports: [
-    CommonModule,
-    ApiRoutingModule,
-    SharedModule
-  ]
+  declarations: [ViewChildComponent, NgTemplateComponent, NgContainerComponent],
+  imports: [CommonModule, ApiRoutingModule, SharedModule],
 })
-export class ApiModule { }
+export class ApiModule {}

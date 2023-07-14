@@ -4,21 +4,19 @@ import { CommandsComponent } from './commands/commands.component';
 import { EnvironmentsComponent } from './environments/environments.component';
 import { MasterComponent } from '../shared/components/master/master.component';
 
-const routes: Routes =
-[
-  { 
-    path: '', 
+const routes: Routes = [
+  {
+    path: '',
     component: MasterComponent,
-    children: 
-    [
+    children: [
       { path: 'commands', component: CommandsComponent },
-      { path: 'environments', component: EnvironmentsComponent }
-    ]
-  }
+      { path: 'environments', component: EnvironmentsComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ToolsRoutingModule { }
+export class ToolsRoutingModule {}

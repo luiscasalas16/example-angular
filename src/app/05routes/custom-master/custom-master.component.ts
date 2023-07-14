@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-custom-master',
   templateUrl: './custom-master.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class CustomMasterComponent {
-
-}
+export class CustomMasterComponent {}

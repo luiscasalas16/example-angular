@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-gif-main',
   templateUrl: './gif-main.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class GifMainComponent {
-
-}
+export class GifMainComponent {}

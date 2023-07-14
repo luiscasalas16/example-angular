@@ -59,20 +59,15 @@ import { SharedModule } from '../shared/shared.module';
     ChartLineComponent,
     MapsMainComponent,
     MapSmallComponent,
-    MapFullComponent
+    MapFullComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     NgChartsModule,
-    ExamplesRoutingModule
+    ExamplesRoutingModule,
   ],
-  providers: [
-    HeroeService,
-    GifsService,
-    CountriesService,
-    SharedModule
-  ]
+  providers: [HeroeService, GifsService, CountriesService, SharedModule],
 })
-export class ExamplesModule { }
+export class ExamplesModule {}

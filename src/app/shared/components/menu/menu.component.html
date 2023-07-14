@@ -1,32 +1,55 @@
 <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Example Angular</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <ng-container *ngFor="let menu of menus">
-                    <li class="nav-item" *ngIf="!!!menu.items; else DROPDOWN">
-                        <a routerLink="{{menu.route}}" class="nav-link" href="#">{{menu.name}}</a>
-                    </li>
-                    <ng-template #DROPDOWN>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {{menu.name}}
-                            </a>
-                            <ul class="dropdown-menu">
-                                <ng-container *ngFor="let item of menu.items">
-                                    <li *ngIf="!item.empty; else EMPTY"><a routerLink="{{item.route}}" class="dropdown-item" href="#">{{item.name}}</a></li>
-                                    <ng-template #EMPTY>
-                                        <li><hr class="dropdown-divider"></li>
-                                    </ng-template>
-                                </ng-container>
-                            </ul>
-                        </li>
-                    </ng-template>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Example Angular</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ng-container *ngFor="let menu of menus">
+          <li class="nav-item" *ngIf="!!!menu.items; else DROPDOWN">
+            <a routerLink="{{ menu.route }}" class="nav-link" href="#">{{
+              menu.name
+            }}</a>
+          </li>
+          <ng-template #DROPDOWN>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                {{ menu.name }}
+              </a>
+              <ul class="dropdown-menu">
+                <ng-container *ngFor="let item of menu.items">
+                  <li *ngIf="!item.empty; else EMPTY">
+                    <a
+                      routerLink="{{ item.route }}"
+                      class="dropdown-item"
+                      href="#"
+                      >{{ item.name }}</a
+                    >
+                  </li>
+                  <ng-template #EMPTY>
+                    <li><hr class="dropdown-divider" /></li>
+                  </ng-template>
                 </ng-container>
-            </ul>
-        </div>
+              </ul>
+            </li>
+          </ng-template>
+        </ng-container>
+      </ul>
     </div>
+  </div>
 </nav>

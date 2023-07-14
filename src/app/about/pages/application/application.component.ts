@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-application',
   templateUrl: './application.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class ApplicationComponent {
-
-}
+export class ApplicationComponent {}

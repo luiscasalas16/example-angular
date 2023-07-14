@@ -1,8 +1,8 @@
 <h2>Api / ng-container</h2>
-<hr>
+<hr />
 
 <h4>Basic</h4>
-<hr>
+<hr />
 
 <p>1</p>
 <ng-container>
@@ -15,35 +15,35 @@
   <p>4</p>
 </ng-container>
 <ng-template #A>
-    <p>5</p>
+  <p>5</p>
 </ng-template>
 
 <h4>*NgIfs</h4>
-<hr>
+<hr />
 
 <ng-container *ngIf="true">
-    <p>1</p>
+  <p>1</p>
 </ng-container>
 
 <ng-container *ngIf="true; else B">
-    <p>2</p>
+  <p>2</p>
 </ng-container>
 <ng-template #B>
-    <p>3</p>
+  <p>3</p>
 </ng-template>
 
 <ng-container *ngIf="false; else C">
-    <p>4</p>
+  <p>4</p>
 </ng-container>
 <ng-template #C>
-    <p>5</p>
+  <p>5</p>
 </ng-template>
 
 <h4>*NgIf *NgFor</h4>
-<hr>
+<hr />
 
-<ng-container *ngFor="let item of [1,2,3,4]">
-    <p *ngIf="item % 2 == 0">
-        {{ item }}
-    </p>
+<ng-container *ngFor="let item of [1, 2, 3, 4]">
+  <p *ngIf="item % 2 == 0">
+    {{ item }}
+  </p>
 </ng-container>

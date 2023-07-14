@@ -5,26 +5,23 @@ import { Person, Game } from '../../interfaces/frms.interface';
 @Component({
   selector: 'app-template-dynamic',
   templateUrl: './template-dynamic.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class TemplateDynamicComponent {
   @ViewChild('myForm') myForm!: NgForm;
 
-  nameGame : string = '';
+  nameGame: string = '';
 
-  person : Person = {
+  person: Person = {
     name: 'Shepard',
-    favorites: [
-      { id: 1, name: 'Mass Effect' }
-    ]
-  }
+    favorites: [{ id: 1, name: 'Mass Effect' }],
+  };
 
   insert() {
-    const newGame : Game  = {
+    const newGame: Game = {
       id: this.person.favorites.length + 1,
-      name: this.nameGame
-    }
+      name: this.nameGame,
+    };
 
     this.person.favorites.push(newGame);
 
@@ -35,11 +32,12 @@ export class TemplateDynamicComponent {
     this.person.favorites.splice(index, 1);
   }
 
-  controlValid( controlName: string ) {
-    return this.myForm?.controls[controlName]?.errors && this.myForm?.controls[controlName]?.touched;
+  controlValid(controlName: string) {
+    return (
+      this.myForm?.controls[controlName]?.errors &&
+      this.myForm?.controls[controlName]?.touched
+    );
   }
 
-  submit() {
-
-  }
+  submit() {}
 }

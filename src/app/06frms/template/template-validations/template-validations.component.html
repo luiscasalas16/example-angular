@@ -1,106 +1,126 @@
 <h2>Forms / Template / Validations</h2>
-<hr>
+<hr />
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <form (ngSubmit)="submit()" autocomplete="off" #myForm="ngForm" passwordCustomValidator>
-                
-                <div class="mb-3 row">
-                    <label class="col-sm-3 col-form-label">Identification Card</label>
-                    <div class="col-sm-9">
-                        <input type="text"
-                               class="form-control"
-                               [ngModel]="initForm.id"
-                               name="id"
-                               required
-                               regexCustomValidator="^\d-\d\d\d\d-\d\d\d\d$">
-                        <span class="form-text text-danger" *ngIf="controlValid('id')">
-                            <div *ngIf="myForm.controls['id']?.errors?.['required']">
-                                Identification card is required.
-                            </div>
-                            <div *ngIf="myForm.controls['id']?.errors?.['regex']">
-                                Invalid identification card format.
-                            </div>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="mb-3 row">
-                    <label class="col-sm-3 col-form-label">Password 1</label>
-                    <div class="col-sm-9">
-                        <input type="text"
-                               class="form-control"
-                               [ngModel]="initForm.password1"
-                               name="password1"
-                               required>
-                        <span class="form-text text-danger" *ngIf="controlValid('password1')">
-                            Password 1 is required.
-                        </span>
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label class="col-sm-3 col-form-label">Password 2</label>
-                    <div class="col-sm-9">
-                        <input type="text"
-                               class="form-control"
-                               [ngModel]="initForm.password2"
-                               name="password2"
-                               required>
-                        <span class="form-text text-danger" *ngIf="controlValid('password2')">
-                            Password 2 is required.
-                        </span>
-                    </div>
-                </div>
-                <div *ngIf="myForm.errors?.['password'] && (myForm.touched || myForm.dirty)" class="cross-validation-error-message alert alert-danger">
-                    Passwords not match.
-                </div>
-
-                <div class="mb-3 row">
-                    <label class="col-sm-3 col-form-label">User</label>
-                    <div class="col-sm-9">
-                        <input type="text"
-                               class="form-control"
-                               [ngModel]="initForm.user"
-                               name="user"
-                               required
-                               userNameCustomValidator>
-                        <span class="form-text text-danger" *ngIf="controlValid('user')">
-                            <div *ngIf="myForm.controls['user']?.errors?.['required']">
-                                User is required.
-                            </div>
-                            <div *ngIf="myForm.controls['user']?.errors?.['username']">
-                                User is already exists.
-                            </div>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <button type="submit"
-                                class="btn btn-primary float-end">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </form>
+  <div class="row">
+    <div class="col">
+      <form
+        (ngSubmit)="submit()"
+        autocomplete="off"
+        #myForm="ngForm"
+        passwordCustomValidator
+      >
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Identification Card</label>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              [ngModel]="initForm.id"
+              name="id"
+              required
+              regexCustomValidator="^\d-\d\d\d\d-\d\d\d\d$"
+            />
+            <span class="form-text text-danger" *ngIf="controlValid('id')">
+              <div *ngIf="myForm.controls['id']?.errors?.['required']">
+                Identification card is required.
+              </div>
+              <div *ngIf="myForm.controls['id']?.errors?.['regex']">
+                Invalid identification card format.
+              </div>
+            </span>
+          </div>
         </div>
-    </div>
-    
-    <div class="row">
-        <div class="col">
-            <span>Valid</span>
-            <pre>{{ myForm.valid }}</pre>
-    
-            <span>Pristine</span>
-            <pre>{{ myForm.pristine }}</pre>
-    
-            <span>Touched</span>
-            <pre>{{ myForm.touched }}</pre>
-    
-            <span>Value</span>
-            <pre>{{ myForm.value | json }}</pre>
+
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Password 1</label>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              [ngModel]="initForm.password1"
+              name="password1"
+              required
+            />
+            <span
+              class="form-text text-danger"
+              *ngIf="controlValid('password1')"
+            >
+              Password 1 is required.
+            </span>
+          </div>
         </div>
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">Password 2</label>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              [ngModel]="initForm.password2"
+              name="password2"
+              required
+            />
+            <span
+              class="form-text text-danger"
+              *ngIf="controlValid('password2')"
+            >
+              Password 2 is required.
+            </span>
+          </div>
+        </div>
+        <div
+          *ngIf="myForm.errors?.['password'] && (myForm.touched || myForm.dirty)"
+          class="cross-validation-error-message alert alert-danger"
+        >
+          Passwords not match.
+        </div>
+
+        <div class="mb-3 row">
+          <label class="col-sm-3 col-form-label">User</label>
+          <div class="col-sm-9">
+            <input
+              type="text"
+              class="form-control"
+              [ngModel]="initForm.user"
+              name="user"
+              required
+              userNameCustomValidator
+            />
+            <span class="form-text text-danger" *ngIf="controlValid('user')">
+              <div *ngIf="myForm.controls['user']?.errors?.['required']">
+                User is required.
+              </div>
+              <div *ngIf="myForm.controls['user']?.errors?.['username']">
+                User is already exists.
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button type="submit" class="btn btn-primary float-end">
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <span>Valid</span>
+      <pre>{{ myForm.valid }}</pre>
+
+      <span>Pristine</span>
+      <pre>{{ myForm.pristine }}</pre>
+
+      <span>Touched</span>
+      <pre>{{ myForm.touched }}</pre>
+
+      <span>Value</span>
+      <pre>{{ myForm.value | json }}</pre>
+    </div>
+  </div>
 </div>

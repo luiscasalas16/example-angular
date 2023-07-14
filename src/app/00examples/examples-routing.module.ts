@@ -13,35 +13,32 @@ import { ChartsMainComponent } from './06charts/charts-main/chats-main.component
 import { MapsMainComponent } from './07maps/maps-main/maps-main.component';
 import { MasterComponent } from '../shared/components/master/master.component';
 
-const routes: Routes = 
-[
-  { 
-    path: '', 
+const routes: Routes = [
+  {
+    path: '',
     component: MasterComponent,
-    children: 
-    [
+    children: [
       { path: 'counter', component: CounterComponent },
       { path: 'heroes', component: HeroeMainComponent },
       { path: 'gifs', component: GifMainComponent },
-      { 
+      {
         path: 'countries',
         component: CountryMainComponent,
-        children: 
-        [
+        children: [
           { path: 'countrybycapital', component: CountryByCapitalComponent },
           { path: 'countrybyname', component: CountryByNameComponent },
           { path: 'countrydetail/:id', component: CountryDetailComponent },
-        ]
+        ],
       },
       { path: 'selectors', component: SelectorsMainComponent },
       { path: 'charts', component: ChartsMainComponent },
       { path: 'maps', component: MapsMainComponent },
-    ]
-  }
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ExamplesRoutingModule { }
+export class ExamplesRoutingModule {}

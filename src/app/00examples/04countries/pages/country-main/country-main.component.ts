@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-country-main',
   templateUrl: './country-main.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class CountryMainComponent {
-
-}
+export class CountryMainComponent {}

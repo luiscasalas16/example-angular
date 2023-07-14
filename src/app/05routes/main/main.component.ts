@@ -4,12 +4,10 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class MainComponent {
-
-  constructor (private router: Router) { }
+  constructor(private router: Router) {}
 
   btn1() {
     this.router.navigate(['/routes/first']);
@@ -20,10 +18,12 @@ export class MainComponent {
   }
 
   btn3() {
-    this.router.navigate(['/routes/route-params',12345]);
+    this.router.navigate(['/routes/route-params', 12345]);
   }
 
   btn4() {
-    this.router.navigate(['/routes/query-params'], { queryParams: { page: 2, sort:'name', order: 'desc'} });
+    this.router.navigate(['/routes/query-params'], {
+      queryParams: { page: 2, sort: 'name', order: 'desc' },
+    });
   }
 }

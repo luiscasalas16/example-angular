@@ -15,13 +15,8 @@ import { LifecycleDummyComponent } from './lifecycle/lifecycle-dummy.component';
     SizerComponent,
     BindingsComponent,
     LifecycleComponent,
-    LifecycleDummyComponent
+    LifecycleDummyComponent,
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ComponentsRoutingModule,
-    SharedModule
-  ]
+  imports: [CommonModule, FormsModule, ComponentsRoutingModule, SharedModule],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

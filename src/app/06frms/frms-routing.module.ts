@@ -9,38 +9,34 @@ import { ReactiveDynamicComponent } from './reactive/reactive-dynamic/reactive-d
 import { ReactiveValidationsComponent } from './reactive/reactive-validations/reactive-validations.component';
 import { MasterComponent } from '../shared/components/master/master.component';
 
-const routes: Routes =
-[
-  { 
-    path: '', 
+const routes: Routes = [
+  {
+    path: '',
     component: MasterComponent,
-    children: 
-    [
+    children: [
       { path: 'basic', component: BasicComponent },
-      { 
-        path: 'template', 
-        children: 
-        [
+      {
+        path: 'template',
+        children: [
           { path: 'basic', component: TemplateBasicComponent },
           { path: 'dynamic', component: TemplateDynamicComponent },
-          { path: 'validations', component: TemplateValidationsComponent }
-        ]
+          { path: 'validations', component: TemplateValidationsComponent },
+        ],
       },
-      { 
-        path: 'reactive', 
-        children: 
-        [
+      {
+        path: 'reactive',
+        children: [
           { path: 'basic', component: ReactiveBasicComponent },
           { path: 'dynamic', component: ReactiveDynamicComponent },
-          { path: 'validations', component: ReactiveValidationsComponent }
-        ]
-      }
-    ]
-  }
+          { path: 'validations', component: ReactiveValidationsComponent },
+        ],
+      },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class FrmsRoutingModule { }
+export class FrmsRoutingModule {}

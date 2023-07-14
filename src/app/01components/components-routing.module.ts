@@ -5,21 +5,19 @@ import { BindingsComponent } from './bindings/bindings.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { MasterComponent } from '../shared/components/master/master.component';
 
-const routes: Routes = 
-[
-  { 
+const routes: Routes = [
+  {
     path: '',
     component: MasterComponent,
-    children: 
-    [
+    children: [
       { path: 'bindings', component: BindingsComponent },
-      { path: 'lifecycle', component: LifecycleComponent }
-    ]
-  }
+      { path: 'lifecycle', component: LifecycleComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ComponentsRoutingModule { }
+export class ComponentsRoutingModule {}

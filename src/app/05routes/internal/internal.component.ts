@@ -4,12 +4,10 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-internal',
   templateUrl: './internal.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class InternalComponent {
-  
-  constructor (private router: Router) { }
+  constructor(private router: Router) {}
 
   btn1() {
     sessionStorage.removeItem('token');

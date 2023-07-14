@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-commands',
   templateUrl: './commands.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class CommandsComponent {
-
-}
+export class CommandsComponent {}

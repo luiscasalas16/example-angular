@@ -1,31 +1,31 @@
 <h2>Forms / Basic</h2>
 
-<hr>
+<hr />
 <p>without ngSubmit:</p>
 
 <form (submit)="submitWithout($event)">
-    <div class="mb-3">
-        <input 
-            type="text" 
-            name="nombre"
-            placeholder="Heroe Name"
-            class="form-control"
-        />
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="mb-3">
+    <input
+      type="text"
+      name="nombre"
+      placeholder="Heroe Name"
+      class="form-control"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
-<hr>
+<hr />
 <p>with ngSubmit:</p>
 
 <form (ngSubmit)="submitWith()">
-    <div class="mb-3">
-        <input 
-            type="text" 
-            name="nombre"
-            placeholder="Heroe Name"
-            class="form-control"
-        />
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="mb-3">
+    <input
+      type="text"
+      name="nombre"
+      placeholder="Heroe Name"
+      class="form-control"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>

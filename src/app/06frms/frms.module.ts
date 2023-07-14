@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; ; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FrmsRoutingModule } from './frms-routing.module';
 import { TemplateBasicComponent } from './template/template-basic/template-basic.component';
@@ -10,7 +10,11 @@ import { ReactiveBasicComponent } from './reactive/reactive-basic/reactive-basic
 import { ReactiveDynamicComponent } from './reactive/reactive-dynamic/reactive-dynamic.component';
 import { ReactiveValidationsComponent } from './reactive/reactive-validations/reactive-validations.component';
 
-import { RegexCustomValidatorDirective, PasswordCustomValidatorDirective, UserNameCustomValidatorDirective } from './template/template-validations/custom-validator';
+import {
+  RegexCustomValidatorDirective,
+  PasswordCustomValidatorDirective,
+  UserNameCustomValidatorDirective,
+} from './template/template-validations/custom-validator';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -23,14 +27,14 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveValidationsComponent,
     RegexCustomValidatorDirective,
     PasswordCustomValidatorDirective,
-    UserNameCustomValidatorDirective
+    UserNameCustomValidatorDirective,
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     FrmsRoutingModule,
-    SharedModule
-  ]
+    SharedModule,
+  ],
 })
-export class FrmsModule { }
+export class FrmsModule {}

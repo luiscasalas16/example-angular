@@ -5,26 +5,28 @@ import { HeroeService } from '../services/heroes.service';
 @Component({
   selector: 'app-heroe-detail',
   templateUrl: './heroe-detail.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class HeroeDetailComponent {
-  
-  new : Heroe = {
+  new: Heroe = {
     heroeName: '',
-    realName: ''
-  }
+    realName: '',
+  };
 
-  constructor( private heroeService : HeroeService ) {}
+  constructor(private heroeService: HeroeService) {}
 
   insert() {
-    if ( this.new.heroeName.trim().length === 0 || this.new.realName.trim().length === 0 ) return;
-    
-    this.heroeService.insertHeroe( this.new );
+    if (
+      this.new.heroeName.trim().length === 0 ||
+      this.new.realName.trim().length === 0
+    )
+      return;
+
+    this.heroeService.insertHeroe(this.new);
 
     this.new = {
       heroeName: '',
-      realName: ''
-    }
+      realName: '',
+    };
   }
 }

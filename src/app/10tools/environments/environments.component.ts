@@ -4,15 +4,13 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-environments',
   templateUrl: './environments.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class EnvironmentsComponent {
-
-  production : boolean;
-  testString : string;
-  testInteger : number;
-  testBoolean : boolean;
+  production: boolean;
+  testString: string;
+  testInteger: number;
+  testBoolean: boolean;
 
   constructor() {
     this.production = environment.production;
@@ -21,7 +19,7 @@ export class EnvironmentsComponent {
     this.testBoolean = environment.testBoolean;
   }
 
-  type (parameter : any) : string {
-    return typeof (parameter);
+  type(parameter: any): string {
+    return typeof parameter;
   }
 }

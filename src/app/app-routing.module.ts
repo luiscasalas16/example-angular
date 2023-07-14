@@ -7,100 +7,114 @@ import { ApplicationComponent } from './about/pages/application/application.comp
 import { DeveloperComponent } from './about/pages/developer/developer.component';
 import { NotFoundComponent } from './shared/page/not-found/not-found.component';
 
-const routes: Routes = 
-[
-  { 
-    path: '', 
-    redirectTo: 'home', 
-    pathMatch: 'full'
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
   //root route example
   //specific style component
-  { 
-    path: 'home', 
-    component: HomeComponent 
+  {
+    path: 'home',
+    component: HomeComponent,
   },
   //root and children route example
   //component with the style for child components
-  { 
-    path: 'about', 
-    component: AboutComponent, 
-    children: 
-    [
-      { 
-        path: '', 
-        redirectTo: 'application', 
-        pathMatch: 'full' 
-      },
-      { 
-        path: 'application', 
-        component: ApplicationComponent 
+  {
+    path: 'about',
+    component: AboutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'application',
+        pathMatch: 'full',
       },
       {
-        path: 'developer', 
-        component: DeveloperComponent 
-      }
-    ]
+        path: 'application',
+        component: ApplicationComponent,
+      },
+      {
+        path: 'developer',
+        component: DeveloperComponent,
+      },
+    ],
   },
   //lazy example
   {
-	  path: 'examples',
-	  loadChildren: () => import('./00examples/examples.module').then( m => m.ExamplesModule )
+    path: 'examples',
+    loadChildren: () =>
+      import('./00examples/examples.module').then((m) => m.ExamplesModule),
   },
   {
-	  path: 'components',
-	  loadChildren: () => import('./01components/components.module').then( m => m.ComponentsModule )
+    path: 'components',
+    loadChildren: () =>
+      import('./01components/components.module').then(
+        (m) => m.ComponentsModule
+      ),
   },
   {
-	  path: 'templates',
-	  loadChildren: () => import('./02templates/templates.module').then( m => m.TemplatesModule )
+    path: 'templates',
+    loadChildren: () =>
+      import('./02templates/templates.module').then((m) => m.TemplatesModule),
   },
   {
-	  path: 'directives',
-	  loadChildren: () => import('./03directives/directives.module').then( m => m.DirectivesModule )
+    path: 'directives',
+    loadChildren: () =>
+      import('./03directives/directives.module').then(
+        (m) => m.DirectivesModule
+      ),
   },
   {
-	  path: 'dependency',
-	  loadChildren: () => import('./04dependency/dependency.module').then( m => m.DependencyModule )
+    path: 'dependency',
+    loadChildren: () =>
+      import('./04dependency/dependency.module').then(
+        (m) => m.DependencyModule
+      ),
   },
   {
-	  path: 'routes',
-	  loadChildren: () => import('./05routes/routes.module').then( m => m.RoutesModule )
+    path: 'routes',
+    loadChildren: () =>
+      import('./05routes/routes.module').then((m) => m.RoutesModule),
   },
   {
-	  path: 'frms',
-	  loadChildren: () => import('./06frms/frms.module').then( m => m.FrmsModule )
+    path: 'frms',
+    loadChildren: () =>
+      import('./06frms/frms.module').then((m) => m.FrmsModule),
   },
   {
-	  path: 'http',
-	  loadChildren: () => import('./07http/http.module').then( m => m.HttpModule )
+    path: 'http',
+    loadChildren: () =>
+      import('./07http/http.module').then((m) => m.HttpModule),
   },
   {
-	  path: 'imports',
-	  loadChildren: () => import('./08imports/imports.module').then( m => m.ImportsModule )
+    path: 'imports',
+    loadChildren: () =>
+      import('./08imports/imports.module').then((m) => m.ImportsModule),
   },
   {
-	  path: 'api',
-	  loadChildren: () => import('./09api/api.module').then( m => m.ApiModule )
+    path: 'api',
+    loadChildren: () => import('./09api/api.module').then((m) => m.ApiModule),
   },
   {
-	  path: 'tools',
-	  loadChildren: () => import('./10tools/tools.module').then( m => m.ToolsModule )
+    path: 'tools',
+    loadChildren: () =>
+      import('./10tools/tools.module').then((m) => m.ToolsModule),
   },
   //not fount route example
-  { 
-    path: 'notfound', 
-    component: NotFoundComponent
+  {
+    path: 'notfound',
+    component: NotFoundComponent,
   },
   //default route redirection
   {
     path: '**',
-    redirectTo: 'notfound'
-  }
+    redirectTo: 'notfound',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

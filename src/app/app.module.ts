@@ -14,15 +14,13 @@ import localeEsCr from '@angular/common/locales/es-CR';
 import localeEs from '@angular/common/locales/es';
 import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
-registerLocaleData( localeEsCr );
-registerLocaleData( localeEs );
-registerLocaleData( localeFr );
+registerLocaleData(localeEsCr);
+registerLocaleData(localeEs);
+registerLocaleData(localeFr);
 //locate
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -31,13 +29,11 @@ registerLocaleData( localeFr );
 
     HomeModule,
     AboutModule,
-    SharedModule
-  ], 
-  //locate
-  providers: [
-    { provide: LOCALE_ID, useValue: 'es-CR' }
+    SharedModule,
   ],
   //locate
-  bootstrap: [AppComponent]
+  providers: [{ provide: LOCALE_ID, useValue: 'es-CR' }],
+  //locate
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

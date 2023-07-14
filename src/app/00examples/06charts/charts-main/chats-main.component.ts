@@ -3,9 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-charts-main',
   templateUrl: './charts-main.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class ChartsMainComponent {
-
-}
+export class ChartsMainComponent {}
