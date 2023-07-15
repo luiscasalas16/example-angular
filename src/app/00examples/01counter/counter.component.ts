@@ -3,35 +3,27 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-counter',
   template: `
-    <h2>Examples / Counter</h2>
-    <hr />
-    <div class="container text-center">
-      <div class="row align-items-center">
-        <div class="col">
-          <h2>{{ tittle }}</h2>
+    <div class="row justify-content-center text-center">
+      <div class="col-auto">
+        <h2>Examples / Counter</h2>
 
-          <h4>
-            Base: <strong> {{ base }} </strong>
-          </h4>
+        <hr />
 
-          <button
-            type="button"
-            class="btn btn-primary"
-            (click)="decrease(base)"
-          >
-            - {{ base }}
-          </button>
+        <h2>{{ tittle }}</h2>
 
-          <span> {{ total }} </span>
+        <h4>
+          Base: <strong> {{ base }} </strong>
+        </h4>
 
-          <button
-            type="button"
-            class="btn btn-primary"
-            (click)="increase(base)"
-          >
-            + {{ base }}
-          </button>
-        </div>
+        <button type="button" class="btn btn-primary" (click)="decrease(base)">
+          - {{ base }}
+        </button>
+
+        <span> {{ total }} </span>
+
+        <button type="button" class="btn btn-primary" (click)="increase(base)">
+          + {{ base }}
+        </button>
       </div>
     </div>
   `,
