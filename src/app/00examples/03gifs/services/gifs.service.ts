@@ -6,8 +6,8 @@ import { SearchGifsResponse, Gif } from '../interfaces/gifs.interface';
   providedIn: 'root',
 })
 export class GifsService {
-  private apiKey: string = 'CtbSNZMFPFlbWl1x5KQjtqPOHnE1ema5';
   private apiUrl: string = 'https://api.giphy.com/v1/gifs';
+  private apiKey: string = 'CtbSNZMFPFlbWl1x5KQjtqPOHnE1ema5';
 
   public results: Gif[] = [];
 
@@ -21,8 +21,8 @@ export class GifsService {
 
     const params = new HttpParams()
       .set('api_key', this.apiKey)
-      .set('limit', '12')
-      .set('q', query);
+      .set('q', query)
+      .set('limit', '12');
 
     this.http
       .get<SearchGifsResponse>(`${this.apiUrl}/search`, { params })
