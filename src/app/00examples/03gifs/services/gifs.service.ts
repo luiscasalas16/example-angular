@@ -11,10 +11,7 @@ export class GifsService {
 
   public results: Gif[] = [];
 
-  constructor(private http: HttpClient) {
-    this.results =
-      JSON.parse(localStorage.getItem('GifsServiceResults')!) || [];
-  }
+  constructor(private http: HttpClient) {}
 
   searchGifs(query: string = '') {
     query = query.trim().toLocaleLowerCase();
@@ -28,10 +25,6 @@ export class GifsService {
       .get<SearchGifsResponse>(`${this.apiUrl}/search`, { params })
       .subscribe((resp) => {
         this.results = resp.data;
-        localStorage.setItem(
-          'GifsServiceResults',
-          JSON.stringify(this.results)
-        );
       });
   }
 }
