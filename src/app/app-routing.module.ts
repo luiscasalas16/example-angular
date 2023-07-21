@@ -101,7 +101,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./10tools/tools.module').then((m) => m.ToolsModule),
   },
-  //not fount route example
+  //not fount route
   {
     path: 'notfound',
     component: NotFoundComponent,
