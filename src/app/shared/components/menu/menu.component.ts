@@ -53,7 +53,7 @@ export class MenuComponent {
       {
         name: 'Components',
         items: [
-          { name: 'Bindings', route: '/components/bindings' },
+          { name: 'Binding', route: '/components/binding' },
           { name: 'Lifecycle', route: '/components/lifecycle' },
         ],
       },
