@@ -5,7 +5,7 @@ Esta aplicación contiene ejemplos y pruebas de angular versión 15. Está dispo
 Los comandos para generarla son:
 
 - npm install -g @angular/cli
-- ng new note example-angular
+- ng new example-angular
 
 Los comandos para ejecutarla son:
 
