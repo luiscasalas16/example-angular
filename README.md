@@ -13,34 +13,29 @@ Los comandos para ejecutarla son:
 - ng serve -o
 - ng build --output-path docs --base-href /notes-angular/
 
-A continuación, un conjunto de enlaces de interés.
-
----
-
-### Documentación
+## Documentación
 
 - [https://angular.io](https://angular.io)
 - [https://angular-university.io/home](https://angular-university.io/home)
 
----
+## Ejemplos
 
-### Artículos
+- [https://code-maze.com/net-core-series/](https://code-maze.com/net-core-series/)
+- [https://code-maze.com/angular-series/](https://code-maze.com/angular-series/)
+- [https://code-maze.com/angular-material-table/](https://code-maze.com/angular-material-series/)
 
-- [URL](https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application) - instalar bootstrap en una aplicación en angular
-- [URL](https://frontbackend.com/angular/how-to-generate-angular-application-in-a-specific-version-using-ng-new-command) - generar una aplicación de angular en una versión específica
-
----
-
-### Paquetes
+## Paquetes
 
 - bibliotecas de paquetes de controles
   - [https://primeng.org](https://primeng.org)
   - [https://material.angular.io](https://material.angular.io)
 
----
+## Artículos
 
-### Ejemplos
+- [URL](https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application) - instalar bootstrap en una aplicación en angular
+- [URL](https://frontbackend.com/angular/how-to-generate-angular-application-in-a-specific-version-using-ng-new-command) - generar una aplicación de angular en una versión específica
 
-- [https://code-maze.com/net-core-series/](https://code-maze.com/net-core-series/)
-- [https://code-maze.com/angular-series/](https://code-maze.com/angular-series/)
-- [https://code-maze.com/angular-material-table/](https://code-maze.com/angular-material-series/)
+## Cursos
+
+- [Angular en 10 minutos - The Coder Cave](https://www.youtube.com/watch?v=KAilbRX96-E)
+- [Angular: De cero a experto - Fernando Herrera](https://www.udemy.com/course/angular-fernando-herrera/)
