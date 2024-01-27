@@ -26,14 +26,13 @@ Los comandos para ejecutarla son:
 
 ## Paquetes
 
-- bibliotecas de paquetes de controles
-  - [https://primeng.org](https://primeng.org)
-  - [https://material.angular.io](https://material.angular.io)
+- [https://primeng.org](https://primeng.org)
+- [https://material.angular.io](https://material.angular.io)
 
 ## Artículos
 
-- [URL](https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application) - instalar bootstrap en una aplicación en angular
-- [URL](https://frontbackend.com/angular/how-to-generate-angular-application-in-a-specific-version-using-ng-new-command) - generar una aplicación de angular en una versión específica
+- [How to add Bootstrap to Angular](https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application)
+- [How to generate Angular application in a specific version](https://frontbackend.com/angular/how-to-generate-angular-application-in-a-specific-version-using-ng-new-command)
 
 ## Cursos
 
