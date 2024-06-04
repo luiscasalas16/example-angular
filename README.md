@@ -2,16 +2,40 @@
 
 Esta aplicación contiene ejemplos y pruebas de angular versión 15. Está disponible en línea en la siguiente dirección [https://luiscasalas16.github.io/notes-angular](https://luiscasalas16.github.io/notes-angular).
 
-Los comandos para generarla son:
+## Comandos
 
-- npm install -g @angular/cli
-- ng new example-angular
+```powershell
+# create application
+ng new example-angular
+```
 
-Los comandos para ejecutarla son:
+```powershell
+# execute application
+npm install
+ng serve -o
+ng build --output-path docs --base-href /notes-angular/
+```
 
-- npm install
-- ng serve -o
-- ng build --output-path docs --base-href /notes-angular/
+```powershell
+# uninstall angular-cli
+npm uninstall -g @angular/cli
+npm cache verify
+```
+
+```powershell
+# install last version angular-cli
+npm install -g @angular/cli
+```
+
+```powershell
+# install specific version angular-cli
+npm install -g @angular/cli@14.0.0.
+```
+
+```powershell
+# version
+ng version
+```
 
 ## Documentación
 
