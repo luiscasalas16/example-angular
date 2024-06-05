@@ -29,7 +29,7 @@ npm install -g @angular/cli
 
 ```powershell
 # install specific version angular-cli
-npm install -g @angular/cli@14.0.0.
+npm install -g @angular/cli@18.0.2
 ```
 
 ```powershell
