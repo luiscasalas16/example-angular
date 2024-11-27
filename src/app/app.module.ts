@@ -1,6 +1,6 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,21 +19,11 @@ registerLocaleData(localeEs);
 registerLocaleData(localeFr);
 //locate
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-
-    AppRoutingModule,
-
-    HomeModule,
-    AboutModule,
-    SharedModule,
-  ],
-  //locate
-  providers: [{ provide: LOCALE_ID, useValue: 'es-CR' }],
-  //locate
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [AppComponent],
+    //locate
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        HomeModule,
+        AboutModule,
+        SharedModule], providers: [{ provide: LOCALE_ID, useValue: 'es-CR' }, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

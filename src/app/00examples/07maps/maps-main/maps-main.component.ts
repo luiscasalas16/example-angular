@@ -34,7 +34,7 @@ export class MapsMainComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    (mapboxgl as any).accessToken = environment.mapboxToken;
+    //(mapboxgl as any).accessToken = environment.mapboxToken;
   }
 
   go(event: any, lngLat: [number, number]) {
