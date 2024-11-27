@@ -29,7 +29,7 @@ npm install -g @angular/cli
 
 ```powershell
 # install specific version angular-cli
-npm install -g @angular/cli@18.0.2
+npm install -g @angular/cli@18.2
 ```
 
 ```powershell
@@ -39,14 +39,15 @@ ng version
 
 ## Documentación
 
-- [https://angular.io](https://angular.io)
-- [https://angular-university.io/home](https://angular-university.io/home)
+- [official documentation](https://angular.dev)
+- [official update guide](https://angular.dev/update-guide)
 
 ## Ejemplos
 
 - [https://code-maze.com/net-core-series/](https://code-maze.com/net-core-series/)
 - [https://code-maze.com/angular-series/](https://code-maze.com/angular-series/)
 - [https://code-maze.com/angular-material-table/](https://code-maze.com/angular-material-series/)
+- [https://angular-university.io/home](https://angular-university.io/home)
 
 ## Paquetes
 
